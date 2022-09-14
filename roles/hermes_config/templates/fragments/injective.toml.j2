@@ -1,0 +1,22 @@
+[[chains]]
+id = 'injective-1'
+rpc_addr = 'http://{{ relayer4_ip }}:14357'
+grpc_addr = 'http://{{ relayer4_ip }}:14390'
+websocket_addr = 'ws://{{ relayer4_ip }}:14357/websocket'
+
+rpc_timeout = '20s'
+account_prefix = 'inj'
+key_name = 'relayer'
+address_type = { derivation = 'ethermint', proto_type = { pk_type = '/injective.crypto.v1beta1.ethsecp256k1.PubKey' } }
+store_prefix = 'ibc'
+default_gas = 100000
+max_gas = 5000000
+gas_price = { price = 500000000, denom = 'inj' }
+gas_multiplier = 1.2
+max_msg_num = 30
+max_tx_size = 1800000
+clock_drift = '15s'
+max_block_time = '10s'
+trusting_period = '7days'
+memo_prefix = '{{ memo }}'
+trust_threshold = { numerator = '1', denominator = '3' }

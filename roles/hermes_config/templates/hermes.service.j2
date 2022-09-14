@@ -1,0 +1,12 @@
+Description=Hermes IBC relayer for {{ target }}
+After=network.target
+
+[Service]
+Type=simple
+User={{ ansible_user }}
+ExecStart=/usr/local/bin/hermes --config /home/ubuntu/.hermes/{{ target }}.toml start
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

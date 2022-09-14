@@ -1,0 +1,45 @@
+{% include 'fragments/header.toml.j2' %}
+
+
+{% include 'fragments/injective.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-8'], # Osmosis
+  ['transfer', 'channel-76'], # Chihuahua
+  ['transfer', 'channel-83'], # Evmos
+  ['transfer', 'channel-1'], # Cosmos
+]
+
+{% include 'fragments/osmosis.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-122'], # Injective
+]
+
+{% include 'fragments/chihuahua.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-12'], # Injective
+]
+
+{% include 'fragments/cosmos.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-220'], # Injective
+]
+
+{% include 'fragments/evmos.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+    ['transfer', 'channel-10'], # Injective
+]
