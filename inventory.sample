@@ -1,0 +1,11 @@
+[relayer]
+10.0.0.1
+
+[all:vars]
+ansible_user=ubuntu
+ansible_port=22
+ansible_ssh_private_key_file="~/.ssh/id_rsa"
+relayer1_ip="10.0.0.2"
+relayer2_ip="10.0.0.3"
+relayer3_ip="10.0.0.4"
+relayer4_ip="10.0.0.5"

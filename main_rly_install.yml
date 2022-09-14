@@ -1,0 +1,7 @@
+---
+- name: Main
+  hosts: 'relayer'
+  gather_facts: false
+  become: true
+  roles:
+    - rly_install

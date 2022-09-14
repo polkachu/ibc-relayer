@@ -1,0 +1,21 @@
+---
+- name: download rly
+  get_url:
+    url: 'https://github.com/cosmos/relayer/releases/download/v{{ rly_version }}/Cosmos.Relayer_{{ rly_version }}_linux_amd64.tar.gz'
+    dest: '/tmp/rly.tar.gz'
+    mode: '0700'
+
+- name: unarchive rly
+  unarchive:
+    src: '/tmp/rly.tar.gz'
+    remote_src: yes
+    dest: '/tmp'
+
+- name: copy rly binary
+  copy:
+    src: "/tmp/Cosmos\ Relayer"
+    dest: '/usr/local/bin/rly'
+    remote_src: true
+    owner: root
+    group: root
+    mode: 755
