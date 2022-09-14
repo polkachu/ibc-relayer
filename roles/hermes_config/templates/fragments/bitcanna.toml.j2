@@ -1,0 +1,22 @@
+[[chains]]
+id = 'bitcanna-1'
+rpc_addr = 'http://{{ bitcanna_ip }}:13057'
+grpc_addr = 'http://{{ bitcanna_ip }}:13090'
+websocket_addr = 'ws://{{ bitcanna_ip }}:13057/websocket'
+
+rpc_timeout = '20s'
+account_prefix = 'bcna'
+key_name = 'relayer'
+store_prefix = 'ibc'
+address_type = { derivation = 'cosmos' }
+default_gas = 100000
+max_gas = 1000000
+gas_price = { price = 0.001, denom = 'ubcna' }
+gas_multiplier = 1.2
+max_msg_num = 30
+max_tx_size = 1800000
+clock_drift = '15s'
+max_block_time = '10s'
+trusting_period = '7days'
+memo_prefix = '{{ memo }}'
+trust_threshold = { numerator = '1', denominator = '3' }

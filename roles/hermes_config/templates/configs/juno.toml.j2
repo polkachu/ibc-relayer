@@ -1,0 +1,81 @@
+{% include 'fragments/header.toml.j2' %}
+
+
+{% include 'fragments/juno.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-29'], # Akash
+  ['transfer', 'channel-50'], # Bitcanna
+  ['transfer', 'channel-28'], # Chihuahua
+  ['transfer', 'channel-70'], # Evmos
+  ['transfer', 'channel-58'], # Kichain
+  ['transfer', 'channel-5'], # Sifchain
+  ['transfer', 'channel-20'], # Stargaze
+  ['transfer', 'channel-62'], # Umee
+]
+
+{% include 'fragments/akash.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-35'], # Juno
+]
+
+{% include 'fragments/bitcanna.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-10'], # Juno
+]
+
+{% include 'fragments/chihuahua.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-11'], # Juno
+]
+
+{% include 'fragments/evmos.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-5'], # Juno
+]
+
+{% include 'fragments/kichain.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-8'], # Juno
+]
+
+{% include 'fragments/sifchain.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-14'], # Juno
+]
+
+{% include 'fragments/stargaze.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-5'], # Juno
+]
+
+{% include 'fragments/umee.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-2'], # Juno
+]

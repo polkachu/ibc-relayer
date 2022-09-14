@@ -1,0 +1,81 @@
+{% include 'fragments/header.toml.j2' %}
+
+
+{% include 'fragments/osmosis.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-1'], # Akash
+  ['transfer', 'channel-51'], # Bitcanna
+  ['transfer', 'channel-113'], # Chihuahua
+  ['transfer', 'channel-204'], # Evmos
+  ['transfer', 'channel-77'], # Kichain
+  ['transfer', 'channel-47'], # Sifchain
+  ['transfer', 'channel-75'], # Stargaze
+  ['transfer', 'channel-184'], # Umee
+]
+
+{% include 'fragments/akash.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-9'], # Osmosis
+]
+
+{% include 'fragments/bitcanna.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-1'], # Osmosis
+]
+
+{% include 'fragments/chihuahua.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-7'], # Osmosis
+]
+
+{% include 'fragments/evmos.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+    ['transfer', 'channel-0'], # Osmosis
+]
+
+{% include 'fragments/kichain.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-0'], # Osmosis
+]
+
+{% include 'fragments/sifchain.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-17'], # Osmosis
+]
+
+{% include 'fragments/stargaze.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-0'], # Osmosis
+]
+
+{% include 'fragments/umee.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-0'], # Osmosis
+]

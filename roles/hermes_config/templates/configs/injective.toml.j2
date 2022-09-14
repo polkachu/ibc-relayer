@@ -6,18 +6,10 @@
 [chains.packet_filter]
 policy = 'allow'
 list = [
-  ['transfer', 'channel-8'], # Osmosis
   ['transfer', 'channel-76'], # Chihuahua
-  ['transfer', 'channel-83'], # Evmos
   ['transfer', 'channel-1'], # Cosmos
-]
-
-{% include 'fragments/osmosis.toml.j2' %}
-
-[chains.packet_filter]
-policy = 'allow'
-list = [
-  ['transfer', 'channel-122'], # Injective
+  ['transfer', 'channel-83'], # Evmos
+  ['transfer', 'channel-8'], # Osmosis
 ]
 
 {% include 'fragments/chihuahua.toml.j2' %}
@@ -42,4 +34,12 @@ list = [
 policy = 'allow'
 list = [
     ['transfer', 'channel-10'], # Injective
+]
+
+{% include 'fragments/osmosis.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-122'], # Injective
 ]

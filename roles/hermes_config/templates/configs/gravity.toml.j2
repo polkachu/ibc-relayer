@@ -1,0 +1,63 @@
+{% include 'fragments/header.toml.j2' %}
+
+
+{% include 'fragments/gravity.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-0'], # Bitcanna
+  ['transfer', 'channel-34'], # Chihuahua
+  ['transfer', 'channel-8'], # Juno
+  ['transfer', 'channel-10'], # Osmosis
+  ['transfer', 'channel-7'], # Stargaze
+  ['transfer', 'channel-28'], # Umee
+]
+
+{% include 'fragments/bitcanna.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-8'], # Gravity
+]
+
+{% include 'fragments/chihuahua.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-15'], # Gravity
+]
+
+{% include 'fragments/juno.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-31'], # Gravity
+]
+
+{% include 'fragments/osmosis.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-144'], # Gravity
+]
+
+{% include 'fragments/stargaze.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-6'], # Gravity
+]
+
+{% include 'fragments/umee.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-9'], # Gravity
+]

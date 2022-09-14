@@ -1,17 +1,17 @@
 [[chains]]
-id = 'osmosis-1'
-rpc_addr = 'http://{{ osmosis_ip }}:12557'
-grpc_addr = 'http://{{ osmosis_ip }}:12590'
-websocket_addr = 'ws://{{ osmosis_ip }}:12557/websocket'
+id = 'kichain-2'
+rpc_addr = 'http://{{ kichain_ip }}:13557'
+grpc_addr = 'http://{{ kichain_ip }}:13590'
+websocket_addr = 'ws://{{ kichain_ip }}:13557/websocket'
 
 rpc_timeout = '20s'
-account_prefix = 'osmo'
+account_prefix = 'ki'
 key_name = 'relayer'
-address_type = { derivation = 'cosmos' }
 store_prefix = 'ibc'
-default_gas = 300000
+address_type = { derivation = 'cosmos' }
+default_gas = 200000
 max_gas = 3500000
-gas_price = { price = 0.000, denom = 'uosmo' }
+gas_price = { price = 0.025, denom = 'uxki' }
 gas_multiplier = 1.2
 max_msg_num = 30
 max_tx_size = 1800000

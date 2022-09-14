@@ -1,21 +1,21 @@
 [[chains]]
-id = 'cosmoshub-4'
-rpc_addr = 'http://{{ cosmos_ip }}:14957'
-grpc_addr = 'http://{{ cosmos_ip }}:14990'
-websocket_addr = 'ws://{{ cosmos_ip }}:14957/websocket'
+id = 'gravity-bridge-3'
+rpc_addr = 'http://{{ gravity_ip }}:14257'
+grpc_addr = 'http://{{ gravity_ip }}:14290'
+websocket_addr = 'ws://{{ gravity_ip }}:14257/websocket'
 
 rpc_timeout = '20s'
-account_prefix = 'cosmos'
+account_prefix = 'gravity'
 key_name = 'relayer'
 address_type = { derivation = 'cosmos' }
 store_prefix = 'ibc'
-default_gas = 150000
-max_gas = 3500000
-gas_price = { price = 0.0025, denom = 'uatom' }
+default_gas = 100000
+max_gas = 5000000
+gas_price = { price = 0.000, denom = 'ugraviton' }
 gas_multiplier = 1.2
 max_msg_num = 30
 max_tx_size = 1800000
-clock_drift = '10s'
+clock_drift = '15s'
 max_block_time = '10s'
 trusting_period = '7days'
 memo_prefix = '{{ memo }}'
