@@ -7,6 +7,7 @@
 policy = 'allow'
 list = [
   ['transfer', 'channel-0'], # Cosmos
+  ['transfer', 'channel-9'], # Evmos
   ['transfer', 'channel-5'], # Osmosis
 ]
 
@@ -15,8 +16,17 @@ list = [
 [chains.packet_filter]
 policy = 'allow'
 list = [
+  ['transfer', 'channel-25'], # Stride
+]
+
+{% include 'fragments/evmos.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
   ['transfer', 'channel-326'], # Stride
 ]
+
 
 {% include 'fragments/cosmos.toml.j2' %}
 
