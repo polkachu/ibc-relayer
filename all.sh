@@ -1,0 +1,5 @@
+ansible-playbook main_hermes_config.yml -e "target=juno"
+ansible-playbook main_hermes_config.yml -e "target=osmosis"
+ansible-playbook main_hermes_config.yml -e "target=gravity"
+ansible-playbook main_hermes_config.yml -e "target=kujira"
+ansible-playbook main_hermes_config.yml -e "target=injective"
