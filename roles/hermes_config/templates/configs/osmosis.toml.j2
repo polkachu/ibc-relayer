@@ -13,6 +13,7 @@ list = [
   ['transfer', 'channel-77'], # Kichain
   ['transfer', 'channel-47'], # Sifchain
   ['transfer', 'channel-75'], # Stargaze
+  ['transfer', 'channel-326'], # Stride
   ['transfer', 'channel-184'], # Umee
 ]
 
@@ -71,6 +72,15 @@ policy = 'allow'
 list = [
   ['transfer', 'channel-0'], # Osmosis
 ]
+
+{% include 'fragments/stride.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-5'], # Osmosis
+]
+
 
 {% include 'fragments/umee.toml.j2' %}
 
