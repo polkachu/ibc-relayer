@@ -28,5 +28,5 @@ ansible-playbook main_hermes_install.yml
 To install a specific Hermes relayer hub
 
 ```bash
-ansible-playbook main_hermes_config.yml -e "target=juno"
+ansible-playbook main_hermes_config.yml -e "target=mainnet"
 ```
