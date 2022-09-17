@@ -5,7 +5,10 @@
 
 [chains.packet_filter]
 policy = 'allow'
-list = []
+list = [
+  ['transfer', 'channel-2'], # Crescent
+  ['transfer', 'channel-1'], # Osmosis
+]
 
 {% include 'fragments/akash.toml.j2' %}
 
@@ -65,6 +68,7 @@ list = [
 [chains.packet_filter]
 policy = 'allow'
 list = [
+  ['transfer', 'channel-11'], # Agoric
   ['transfer', 'channel-4'], # Axelar
   ['transfer', 'channel-1'], # Cosmos
   ['transfer', 'channel-2'], # Gravity
@@ -157,6 +161,7 @@ list = [
 [chains.packet_filter]
 policy = 'allow'
 list = [
+  ['transfer', 'channel-320'], # Agoric
   ['transfer', 'channel-1'], # Akash
   ['transfer', 'channel-51'], # Bitcanna
   ['transfer', 'channel-113'], # Chihuahua

@@ -1,8 +1,8 @@
 [[chains]]
 id = 'agoric-3'
-rpc_addr = 'http:/{{ akash_ip }}:14457'
-grpc_addr = 'http:/{{ akash_ip }}:14490'
-websocket_addr = 'ws:/{{ akash_ip }}:14457/websocket'
+rpc_addr = 'http:/{{ agoric_ip }}:14457'
+grpc_addr = 'http:/{{ agoric_ip }}:14490'
+websocket_addr = 'ws:/{{ agoric_ip }}:14457/websocket'
 
 rpc_timeout = '20s'
 account_prefix = 'agoric'
@@ -17,6 +17,6 @@ max_msg_num = 30
 max_tx_size = 1800000
 clock_drift = '15s'
 max_block_time = '10s'
-trusting_period = '7days'
+trusting_period = '14days'
 memo_prefix = '{{ memo }}'
 trust_threshold = { numerator = '1', denominator = '3' }
