@@ -1,6 +1,12 @@
 {% include 'fragments/header.toml.j2' %}
 
 
+{% include 'fragments/agoric.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = []
+
 {% include 'fragments/akash.toml.j2' %}
 
 [chains.packet_filter]
