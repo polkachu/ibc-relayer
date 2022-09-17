@@ -15,7 +15,10 @@ list = [
 [chains.packet_filter]
 policy = 'allow'
 list = [
+  ['transfer', 'channel-7'], # Crescent
   ['transfer', 'channel-14'], # Kujira
+  ['transfer', 'channel-10'], # Injective
+  ['transfer', 'channel-18'], # Stargaze
 ]
 
 {% include 'fragments/bitcanna.toml.j2' %}
@@ -43,11 +46,24 @@ list = [
 [chains.packet_filter]
 policy = 'allow'
 list = [
+  ['transfer', 'channel-326'], # Crescent
   ['transfer', 'channel-292'], # Evmos
   ['transfer', 'channel-220'], # Injective
   ['transfer', 'channel-343'], # Kujira
   ['transfer', 'channel-141'], # Osmosis
   ['transfer', 'channel-391'], # Stride
+]
+
+{% include 'fragments/crescent.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-4'], # Axelar
+  ['transfer', 'channel-1'], # Cosmos
+  ['transfer', 'channel-2'], # Gravity
+  ['transfer', 'channel-3'], # Juno
+  ['transfer', 'channel-9'], # Osmosis
 ]
 
 {% include 'fragments/evmos.toml.j2' %}
@@ -69,6 +85,7 @@ list = [
 policy = 'allow'
 list = [
   ['transfer', 'channel-34'], # Chihuahua
+  ['transfer', 'channel-62'], # Crescent
   ['transfer', 'channel-8'], # Juno
   ['transfer', 'channel-10'], # Osmosis
   ['transfer', 'channel-7'], # Stargaze
@@ -80,10 +97,12 @@ list = [
 [chains.packet_filter]
 policy = 'allow'
 list = [
+  ['transfer', 'channel-84'], # Axelar
   ['transfer', 'channel-76'], # Chihuahua
   ['transfer', 'channel-1'], # Cosmos
   ['transfer', 'channel-83'], # Evmos
   ['transfer', 'channel-8'], # Osmosis
+  ['transfer', 'channel-89'], # Stride
 ]
 
 {% include 'fragments/kichain.toml.j2' %}
@@ -105,6 +124,8 @@ list = [
   ['transfer', 'channel-23'], # Evmos
   ['transfer', 'channel-1'], # Juno
   ['transfer', 'channel-3'], # Osmosis
+  ['transfer', 'channel-7'], # Stargaze
+  ['transfer', 'channel-32'], # Stride
 ]
 
 {% include 'fragments/juno.toml.j2' %}
@@ -115,6 +136,7 @@ list = [
   ['transfer', 'channel-29'], # Akash
   ['transfer', 'channel-50'], # Bitcanna
   ['transfer', 'channel-28'], # Chihuahua
+  ['transfer', 'channel-81'], # Crescent
   ['transfer', 'channel-70'], # Evmos
   ['transfer', 'channel-31'], # Gravity
   ['transfer', 'channel-58'], # Kichain
@@ -133,6 +155,7 @@ list = [
   ['transfer', 'channel-51'], # Bitcanna
   ['transfer', 'channel-113'], # Chihuahua
   ['transfer', 'channel-0'], # Cosmos
+  ['transfer', 'channel-297'], # Crescent
   ['transfer', 'channel-204'], # Evmos
   ['transfer', 'channel-144'], # Gravity
   ['transfer', 'channel-122'], # Injective
@@ -158,7 +181,9 @@ list = [
 [chains.packet_filter]
 policy = 'allow'
 list = [
+  ['transfer', 'channel-50'], # Axelar
   ['transfer', 'channel-6'], # Gravity
+  ['transfer', 'channel-49'], # Kujira
   ['transfer', 'channel-5'], # Juno
   ['transfer', 'channel-0'], # Osmosis
 ]
@@ -170,6 +195,8 @@ policy = 'allow'
 list = [
   ['transfer', 'channel-0'], # Cosmos
   ['transfer', 'channel-9'], # Evmos
+  ['transfer', 'channel-6'], # Injective
+  ['transfer', 'channel-8'], # Kujira
   ['transfer', 'channel-5'], # Osmosis
 ]
 

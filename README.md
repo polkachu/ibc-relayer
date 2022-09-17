@@ -13,19 +13,21 @@ First copy it to your own inventory file so you can customize it to suit your ne
 cp inventory.sample inventory
 ```
 
-To install rly
+### rly installation
 
 ```bash
 ansible-playbook main_rly_install.yml
 ```
 
-To install Hermes
+### Hermes installation
 
 ```bash
 ansible-playbook main_hermes_install.yml
 ```
 
-To install a specific Hermes relayer hub
+### Hermes deployment
+
+You will want to maintain your own `mainnet.toml.j2` file in the `hermes_config` playbook
 
 ```bash
 ansible-playbook main_hermes_config.yml -e "target=mainnet"
