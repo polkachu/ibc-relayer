@@ -1,0 +1,30 @@
+[[chains]]
+id = 'cheqd-mainnet-1'
+
+# API access to Cheqd node with indexing
+grpc_addr = 'http://{{ supported_networks.cheqd.ip }}:16190'
+rpc_addr = 'http://{{ supported_networks.cheqd.ip }}:16157'
+websocket_addr = 'ws://{{ supported_networks.cheqd.ip }}:16157/websocket'
+
+account_prefix = 'cheqd'
+address_type = {derivation = 'cosmos'}
+clock_drift = '20s'
+default_gas = 1000000
+gas_adjustment = 0.5
+gas_price = {price = 35, denom = 'ncheq'}
+key_name = 'cheqd-relayer'
+max_block_time = '15s'
+max_gas = 2000000
+max_tx_size = 180000
+max_msg_num = 10
+memo_prefix = '{{ memo }}'
+rpc_timeout = '30s'
+store_prefix = 'ibc'
+trust_threshold = {numerator = '1', denominator = '3'}
+trusting_period = '14days'
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', '*'],
+]
