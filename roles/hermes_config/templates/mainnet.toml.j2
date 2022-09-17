@@ -1,11 +1,13 @@
 {% include 'fragments/header.toml.j2' %}
 
 {% for network in supported_networks %}
-  {% set fragment = 'fragments/' + network + '.toml.j2' %}
-  {% include fragment%}
-  [chains.packet_filter]
-  policy = 'allow'
-  list = [
-    ['transfer', '*'],
-  ]
+{% set fragment = 'fragments/' + network + '.toml.j2' %}
+{% include fragment%}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', '*'],
+]
+
 {% endfor %}
