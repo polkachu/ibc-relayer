@@ -28,6 +28,8 @@ list = [
   ['transfer', 'channel-14'], # Kujira
   ['transfer', 'channel-10'], # Injective
   ['transfer', 'channel-18'], # Stargaze
+  ['transfer', 'channel-33'], # Stride
+  ['transfer', 'channel-36'], # Umee
 ]
 
 {% include 'fragments/bitcanna.toml.j2' %}
@@ -204,6 +206,7 @@ list = [
 [chains.packet_filter]
 policy = 'allow'
 list = [
+  ['transfer', 'channel-11'], # Axelar
   ['transfer', 'channel-0'], # Cosmos
   ['transfer', 'channel-9'], # Evmos
   ['transfer', 'channel-6'], # Injective
@@ -216,6 +219,7 @@ list = [
 [chains.packet_filter]
 policy = 'allow'
 list = [
+  ['transfer', 'channel-33'], # Axelar
   ['transfer', 'channel-9'], # Gravity
   ['transfer', 'channel-2'], # Juno
   ['transfer', 'channel-0'], # Osmosis
