@@ -1,4 +1,11 @@
 ---
+- name: make hermes dir
+  file:
+    path: '/home/{{ ansible_user }}/.hermes/'
+    owner: '{{ ansible_user }}'
+    group: '{{ ansible_user }}'
+    state: directory
+
 - name: Copy hermes config script
   template:
     src: '{{ target }}.toml.j2'

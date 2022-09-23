@@ -1,0 +1,22 @@
+[[chains]]
+id = 'cheqd-mainnet-1'
+grpc_addr = 'http://{{ cheqd_ip }}:16190'
+rpc_addr = 'http://{{ cheqd_ip }}:16157'
+websocket_addr = 'ws://{{ cheqd_ip }}:16157/websocket'
+
+rpc_timeout = '30s'
+account_prefix = 'cheqd'
+key_name = 'relayer'
+address_type = {derivation = 'cosmos'}
+store_prefix = 'ibc'
+default_gas = 1000000
+max_gas = 2000000
+gas_price = {price = 35, denom = 'ncheq'}
+gas_multiplier = 1.5
+max_msg_num = 10
+max_tx_size = 180000
+clock_drift = '20s'
+max_block_time = '15s'
+trusting_period = '14days'
+memo_prefix = '{{ memo }}'
+trust_threshold = {numerator = '1', denominator = '3'}
