@@ -1,17 +1,17 @@
 [[chains]]
-id = 'kichain-2'
-rpc_addr = 'http://{{ kichain_ip }}:13557'
-grpc_addr = 'http://{{ kichain_ip }}:13590'
-websocket_addr = 'ws://{{ kichain_ip }}:13557/websocket'
+id = 'sifchain-1'
+rpc_addr = 'http://{{ sifchain_ip }}:13257'
+grpc_addr = 'http://{{ sifchain_ip }}:13290'
+websocket_addr = 'ws://{{ sifchain_ip }}:13257/websocket'
 
 rpc_timeout = '20s'
-account_prefix = 'ki'
-key_name = 'relayer'
+account_prefix = 'sif'
+key_name = '{{ key_name }}'
 store_prefix = 'ibc'
 address_type = { derivation = 'cosmos' }
-default_gas = 300000
-max_gas = 3500000
-gas_price = { price = 0.025, denom = 'uxki' }
+default_gas = 100000
+max_gas = 100000000
+gas_price = { price = 0.001, denom = 'rowan' }
 gas_multiplier = 1.2
 max_msg_num = 30
 max_tx_size = 1800000

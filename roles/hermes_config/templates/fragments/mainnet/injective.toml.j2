@@ -6,7 +6,7 @@ websocket_addr = 'ws://{{ injective_ip }}:14357/websocket'
 
 rpc_timeout = '20s'
 account_prefix = 'inj'
-key_name = 'relayer'
+key_name = '{{ key_name }}'
 address_type = { derivation = 'ethermint', proto_type = { pk_type = '/injective.crypto.v1beta1.ethsecp256k1.PubKey' } }
 store_prefix = 'ibc'
 default_gas = 400000

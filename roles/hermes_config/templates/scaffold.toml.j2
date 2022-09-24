@@ -1,0 +1,21 @@
+{% if target == 'mainnet' %}
+  {% set networks = mainnet_networks %}
+{% else %}
+  {% set networks = testnet_networks %}
+{% endif %}
+
+{% include 'fragments/header.toml.j2' %}
+
+{% for network in mainnet_networks %}
+
+{% set fragment = 'fragments/' + target + '/' + network + '.toml.j2' %}
+{% include fragment%}
+
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', '*'],
+]
+
+{% endfor %}

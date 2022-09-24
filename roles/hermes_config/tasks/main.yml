@@ -6,13 +6,23 @@
     group: '{{ ansible_user }}'
     state: directory
 
-- name: Copy hermes config script
+- name: Copy hermes config script with customization
   template:
     src: '{{ target }}.toml.j2'
     dest: '/home/{{ ansible_user }}/.hermes/{{ target }}.toml'
     owner: '{{ ansible_user }}'
     group: '{{ ansible_user }}'
     mode: '0644'
+  when: mainnet_networks is not defined or mainnet_networks|length == 0
+
+- name: Copy hermes config script with scaffolding
+  template:
+    src: 'scaffold.toml.j2'
+    dest: '/home/{{ ansible_user }}/.hermes/{{ target }}.toml'
+    owner: '{{ ansible_user }}'
+    group: '{{ ansible_user }}'
+    mode: '0644'
+  when: mainnet_networks is defined and mainnet_networks|length > 0
 
 - name: create hermes systemd unit
   become: true

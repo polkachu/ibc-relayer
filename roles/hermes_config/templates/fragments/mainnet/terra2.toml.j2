@@ -1,20 +1,20 @@
 [[chains]]
-id = 'kaiyo-1'
-rpc_addr = 'http://{{ kujira_ip }}:11857'
-grpc_addr = 'http://{{ kujira_ip }}:11890'
-websocket_addr = 'ws://{{ kujira_ip }}:11857/websocket'
+id = 'phoenix-1'
+rpc_addr = 'http://{{ terra2_ip }}:11757'
+grpc_addr = 'http://{{ terra2_ip }}:11790'
+websocket_addr = 'ws://{{ terra2_ip }}:11757/websocket'
 
 rpc_timeout = '20s'
-account_prefix = 'kujira'
-key_name = 'relayer'
+account_prefix = 'terra'
+key_name = '{{ key_name }}'
 address_type = { derivation = 'cosmos' }
 store_prefix = 'ibc'
-default_gas = 300000
+default_gas = 100000
 max_gas = 3500000
-gas_price = { price = 0.00125, denom = 'ukuji' }
+gas_price = { price = 0.015, denom = 'uluna' }
 gas_multiplier = 1.2
 max_msg_num = 30
-max_tx_size = 2000000
+max_tx_size = 100000
 clock_drift = '45s'
 max_block_time = '10s'
 trusting_period = '10days'

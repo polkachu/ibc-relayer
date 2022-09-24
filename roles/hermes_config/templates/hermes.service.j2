@@ -4,7 +4,7 @@ After=network.target
 [Service]
 Type=simple
 User={{ ansible_user }}
-ExecStart=/usr/local/bin/hermes --config /home/ubuntu/.hermes/{{ target }}.toml start
+ExecStart=/usr/local/bin/hermes --config /home/{{ ansible_user }}/.hermes/{{ target }}.toml start
 Restart=always
 RestartSec=5
 

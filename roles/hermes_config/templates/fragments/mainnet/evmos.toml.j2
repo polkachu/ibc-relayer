@@ -6,7 +6,7 @@ websocket_addr = 'ws://{{ evmos_ip }}:13457/websocket'
 
 rpc_timeout = '20s'
 account_prefix = 'evmos'
-key_name = 'relayer'
+key_name = '{{ key_name }}'
 store_prefix = 'ibc'
 address_type = { derivation = 'ethermint', proto_type = { pk_type = '/ethermint.crypto.v1.ethsecp256k1.PubKey' } }
 default_gas = 400000

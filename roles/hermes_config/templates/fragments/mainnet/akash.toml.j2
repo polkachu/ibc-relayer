@@ -1,17 +1,17 @@
 [[chains]]
-id = 'crescent-1'
-rpc_addr = 'http://{{ crescent_ip }}:14557'
-grpc_addr = 'http://{{ crescent_ip }}:14590'
-websocket_addr = 'ws://{{ crescent_ip }}:14557/websocket'
+id = 'akashnet-2'
+rpc_addr = 'http:/{{ akash_ip }}:12857'
+grpc_addr = 'http:/{{ akash_ip }}:12890'
+websocket_addr = 'ws:/{{ akash_ip }}:12857/websocket'
 
 rpc_timeout = '20s'
-account_prefix = 'cre'
-key_name = 'relayer'
+account_prefix = 'akash'
+key_name = '{{ key_name }}'
 address_type = { derivation = 'cosmos' }
 store_prefix = 'ibc'
-default_gas = 400000
-max_gas = 1000000
-gas_price = { price = 0.0025, denom = 'ucre' }
+default_gas = 100000
+max_gas =  1000000
+gas_price = { price = 0.025, denom = 'uakt' }
 gas_multiplier = 1.2
 max_msg_num = 30
 max_tx_size = 1800000
