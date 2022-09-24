@@ -46,4 +46,4 @@ You will fill in the list of networks you want to relay in the `mainnet_networks
 
 This mode is suitable when you connect lots of different networks and you want to fine-tune how they connect with each other.
 
-You will leave `mainnet_networks` or `testnet_networks` blank in the inventory file. You will customize the `mainnet.toml.j2` or `testnet.toml.j2` using our files as the starting point.
+You will leave `mainnet_networks` or `testnet_networks` blank in the inventory file. You will customize the `mainnet.toml.j2` or `testnet.toml.j2` files using our files as the starting point.
