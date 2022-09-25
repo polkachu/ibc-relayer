@@ -1,0 +1,25 @@
+[[chains]]
+id = 'vidulum-1'
+rpc_addr = 'http://{{ vidulum_ip }}:17057'
+grpc_addr = 'http://{{ vidulum_ip }}:17090'
+websocket_addr = 'ws://{{ vidulum_ip }}:17057/websocket'
+
+rpc_timeout = '30s'
+account_prefix = 'vdl'
+key_name = 'vidulum'
+store_prefix = 'ibc'
+max_tx_size = 180000
+max_gas = 3000000
+max_msg_num = 30
+gas_price = { price = 0, denom = 'uvdl' }
+gas_adjustment = 1
+clock_drift ='70s'
+trusting_period = '10days'
+trust_threshold = { numerator = '1', denominator = '3' }
+memo_prefix = '{{ memo }}'
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', '*'],
+]
