@@ -28,7 +28,9 @@
   blockinfile:
     dest: '/home/{{ ansible_user }}/.hermes/{{ target }}.toml'
     block: "{{ lookup('template', 'fragments/{{ item.key }}.toml.j2') }}"
-    marker: '# ANSIBLE MANAGED BLOCK FOR: {{ item.key }}'
+    marker: '# {mark}'
+    marker_begin: 'Begin block: {{ item.key }}'
+    marker_end: 'End block: {{ item.key }}'
   with_dict: '{{ supported_networks }}'
 
 - name: create hermes systemd unit
