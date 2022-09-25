@@ -1,0 +1,30 @@
+[[chains]]
+id = 'phoenix-1'
+
+# API access to Terra node with indexing
+rpc_addr = 'http://{{ terra2_ip }}:11757'
+grpc_addr = 'http://{{ terra2_ip }}:11790'
+websocket_addr = 'ws://{{ terra2_ip }}:11757/websocket'
+
+rpc_timeout = '20s'
+account_prefix = 'terra'
+key_name = 'terra-relayer'
+store_prefix = 'ibc'
+max_msg_num = 30
+max_tx_size = 100000
+default_gas = 100000
+max_gas = 3500000
+gas_multiplier = 1.2
+gas_price = { price = 0.015, denom = 'uluna' }
+clock_drift = '45s'
+max_block_time = '10s'
+memo_prefix = '{{ memo }}'
+trusting_period = '10days'
+trust_threshold = { numerator = '1', denominator = '3' }
+address_type = { derivation = 'cosmos' }
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', '*'],
+]

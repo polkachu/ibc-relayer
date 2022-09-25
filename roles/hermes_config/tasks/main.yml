@@ -1,5 +1,12 @@
 ---
-- name: Copy hermes config script
+- name: make hermes dir
+  file:
+    path: '/home/{{ ansible_user }}/.hermes/'
+    owner: '{{ ansible_user }}'
+    group: '{{ ansible_user }}'
+    state: directory
+
+- name: copy hermes config script
   template:
     src: '{{ target }}.toml.j2'
     dest: '/home/{{ ansible_user }}/.hermes/{{ target }}.toml'
@@ -16,7 +23,7 @@
     group: root
     mode: '600'
 
-- name: Open hermes telemetry port
+- name: open hermes telemetry port
   become: true
   ufw:
     rule: allow
