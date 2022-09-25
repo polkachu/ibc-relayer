@@ -1,0 +1,17 @@
+---
+all:
+  hosts:
+    relayer:
+      ansible_host: 4.3.2.1
+  vars:
+    ansible_user: deploy
+    ansible_port: 22
+    target: mainnet
+    memo: 'Relayed with 💜 by Lavender.Five Nodes 🐝'
+    default_rpc: 226
+    default_grpc: 90
+    supported_networks:
+      akash:
+        ip: 1.2.3.4
+      bitsong:
+        ip: 2.43.12.423

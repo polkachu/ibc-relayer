@@ -1,7 +1,7 @@
 [[chains]]
 id = 'juno-1'
-{% set rpc_port = port_prefixes.json[item.key] if port_prefixes_url is defined else default_rpc %}
-{% set grpc_port = port_prefixes.json[item.key] if port_prefixes_url is defined else default_grpc %}
+{% set rpc_port = port_prefixes.json[item.key] if port_prefix_url is defined else default_rpc %}
+{% set grpc_port = port_prefixes.json[item.key] if port_prefix_url is defined else default_grpc %}
 rpc_addr = 'http:/{{ item.value.ip }}:{{ rpc_port }}57'
 grpc_addr = 'http:/{{ item.value.ip }}:{{ grpc_port }}90'
 websocket_addr = 'ws:/{{ item.value.ip }}:{{ rpc_port }}57/websocket'
