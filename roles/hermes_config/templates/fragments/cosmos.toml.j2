@@ -1,8 +1,7 @@
 [[chains]]
 id = 'cosmoshub-4'
-rpc_addr = 'http://{{ cosmos_ip }}:14957'
-grpc_addr = 'http://{{ cosmos_ip }}:14990'
-websocket_addr = 'ws://{{ cosmos_ip }}:14957/websocket'
+{% include 'fragments/ports.toml.j2' %}
+
 
 rpc_timeout = '20s'
 account_prefix = 'cosmos'

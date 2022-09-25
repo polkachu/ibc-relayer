@@ -1,8 +1,7 @@
 [[chains]]
 id = 'omniflixhub-1'
-rpc_addr = 'http://{{ omniflix_ip }}:16957'
-grpc_addr = 'http://{{ omniflix_ip }}:16990'
-websocket_addr = 'ws://{{ omniflix_ip }}:16957/websocket'
+{% include 'fragments/ports.toml.j2' %}
+
 
 rpc_timeout = '15s'
 account_prefix = 'omniflix'

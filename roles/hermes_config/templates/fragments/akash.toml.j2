@@ -1,8 +1,7 @@
 [[chains]]
 id = 'akashnet-2'
-rpc_addr = 'http:/{{ akash_ip }}:12857'
-grpc_addr = 'http:/{{ akash_ip }}:12890'
-websocket_addr = 'ws:/{{ akash_ip }}:12857/websocket'
+{% include 'fragments/ports.toml.j2' %}
+
 
 rpc_timeout = '20s'
 account_prefix = 'akash'

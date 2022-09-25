@@ -1,8 +1,7 @@
 [[chains]]
 id = 'cerberus-chain-1'
-rpc_addr = 'http://{{ cerberus_ip }}:13857'
-grpc_addr = 'http://{{ cerberus_ip }}:13890'
-websocket_addr = 'ws://{{ cerberus_ip }}:13857/websocket'
+{% include 'fragments/ports.toml.j2' %}
+
 
 rpc_timeout = '15s'
 account_prefix = 'cerberus'

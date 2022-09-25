@@ -1,8 +1,7 @@
 [[chains]]
 id = 'impacthub-3'
-rpc_addr = 'http://{{ ixo_ip }}:13557'
-grpc_addr = 'http://{{ ixo_ip }}:13590'
-websocket_addr = 'ws://{{ ixo_ip }}:13557/websocket'
+{% include 'fragments/ports.toml.j2' %}
+
 
 rpc_timeout = '30s'
 account_prefix = 'ixo'

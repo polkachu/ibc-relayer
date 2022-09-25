@@ -1,8 +1,7 @@
 [[chains]]
 id = 'stargaze-1'
-rpc_addr = 'http://{{ stargaze_ip }}:13757'
-grpc_addr = 'http://{{ stargaze_ip }}:13790'
-websocket_addr = 'ws://{{ stargaze_ip }}:13757/websocket'
+{% include 'fragments/ports.toml.j2' %}
+
 
 rpc_timeout = '20s'
 account_prefix = 'stars'

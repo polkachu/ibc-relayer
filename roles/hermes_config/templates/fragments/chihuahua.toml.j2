@@ -1,8 +1,7 @@
 [[chains]]
 id = 'chihuahua-1'
-rpc_addr = 'http://{{ chihuahua_ip }}:12957'
-grpc_addr = 'http://{{ chihuahua_ip }}:12990'
-websocket_addr = 'ws://{{ chihuahua_ip }}:12957/websocket'
+{% include 'fragments/ports.toml.j2' %}
+
 
 rpc_timeout = '20s'
 account_prefix = 'chihuahua'

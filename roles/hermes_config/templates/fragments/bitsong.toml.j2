@@ -1,8 +1,7 @@
 [[chains]]
 id = 'bitsong-2b'
-rpc_addr = 'http://{{ bitsong_ip }}:16957'
-grpc_addr = 'http://{{ bitsong_ip }}:16090'
-websocket_addr = 'ws://{{ bitsong_ip }}:16057/websocket'
+{% include 'fragments/ports.toml.j2' %}
+
 
 rpc_timeout = '15s'
 account_prefix = 'bitsong'

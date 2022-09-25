@@ -1,8 +1,7 @@
 [[chains]]
 id = 'sifchain-1'
-rpc_addr = 'http://{{ sifchain_ip }}:13257'
-grpc_addr = 'http://{{ sifchain_ip }}:13290'
-websocket_addr = 'ws://{{ sifchain_ip }}:13257/websocket'
+{% include 'fragments/ports.toml.j2' %}
+
 
 rpc_timeout = '20s'
 account_prefix = 'sif'

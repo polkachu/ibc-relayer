@@ -1,8 +1,7 @@
 [[chains]]
 id = 'juno-1'
-rpc_addr = 'http://{{ juno_ip }}:12657'
-grpc_addr = 'http://{{ juno_ip }}:12690'
-websocket_addr = 'ws://{{ juno_ip }}:12657/websocket'
+{% include 'fragments/ports.toml.j2' %}
+
 
 rpc_timeout = '20s'
 account_prefix = 'juno'

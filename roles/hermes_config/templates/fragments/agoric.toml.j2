@@ -1,8 +1,7 @@
 [[chains]]
 id = 'agoric-3'
-rpc_addr = 'http:/{{ agoric_ip }}:14457'
-grpc_addr = 'http:/{{ agoric_ip }}:14490'
-websocket_addr = 'ws:/{{ agoric_ip }}:14457/websocket'
+{% include 'fragments/ports.toml.j2' %}
+
 
 rpc_timeout = '20s'
 account_prefix = 'agoric'

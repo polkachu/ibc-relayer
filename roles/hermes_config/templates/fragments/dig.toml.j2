@@ -1,8 +1,7 @@
 [[chains]]
 id = 'dig-1'
-rpc_addr = 'http://{{ dig_ip }}:16357'
-grpc_addr = 'http://{{ dig_ip }}:16390'
-websocket_addr = 'ws://{{ dig_ip }}:16357/websocket'
+{% include 'fragments/ports.toml.j2' %}
+
 
 rpc_timeout = '30s'
 account_prefix = 'dig'

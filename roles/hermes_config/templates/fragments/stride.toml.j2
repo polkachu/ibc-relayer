@@ -1,8 +1,7 @@
 [[chains]]
 id = 'stride-1'
-rpc_addr = 'http://{{ umee_ip }}:12257'
-grpc_addr = 'http://{{ umee_ip }}:12290'
-websocket_addr = 'ws://{{ umee_ip }}:12257/websocket'
+{% include 'fragments/ports.toml.j2' %}
+
 
 rpc_timeout = '20s'
 account_prefix = 'stride'

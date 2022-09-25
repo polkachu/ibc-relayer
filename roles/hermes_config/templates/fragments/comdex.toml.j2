@@ -1,8 +1,7 @@
 [[chains]]
 id = 'comdex-1'
-rpc_addr = 'http://{{ comdex_ip }}:13157'
-grpc_addr = 'http://{{ comdex_ip }}:13190'
-websocket_addr = 'ws://{{ comdex_ip }}:13157/websocket'
+{% include 'fragments/ports.toml.j2' %}
+
 
 rpc_timeout = '15s'
 account_prefix = 'comdex'

@@ -1,8 +1,7 @@
 [[chains]]
 id = 'kichain-2'
-rpc_addr = 'http://{{ kichain_ip }}:13557'
-grpc_addr = 'http://{{ kichain_ip }}:13590'
-websocket_addr = 'ws://{{ kichain_ip }}:13557/websocket'
+{% include 'fragments/ports.toml.j2' %}
+
 
 rpc_timeout = '20s'
 account_prefix = 'ki'

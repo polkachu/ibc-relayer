@@ -1,8 +1,7 @@
 [[chains]]
 id = 'osmosis-1'
-rpc_addr = 'http://{{ osmosis_ip }}:12557'
-grpc_addr = 'http://{{ osmosis_ip }}:12590'
-websocket_addr = 'ws://{{ osmosis_ip }}:12557/websocket'
+{% include 'fragments/ports.toml.j2' %}
+
 
 rpc_timeout = '20s'
 account_prefix = 'osmo'

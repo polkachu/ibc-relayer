@@ -1,10 +1,7 @@
 [[chains]]
 id = 'cheqd-mainnet-1'
+{% include 'fragments/ports.toml.j2' %}
 
-# API access to Cheqd node with indexing
-grpc_addr = 'http://{{ cheqd_ip }}:16190'
-rpc_addr = 'http://{{ cheqd_ip }}:16157'
-websocket_addr = 'ws://{{ cheqd_ip }}:16157/websocket'
 
 account_prefix = 'cheqd'
 address_type = {derivation = 'cosmos'}

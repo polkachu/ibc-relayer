@@ -1,8 +1,7 @@
 [[chains]]
 id = 'kaiyo-1'
-rpc_addr = 'http://{{ kujira_ip }}:11857'
-grpc_addr = 'http://{{ kujira_ip }}:11890'
-websocket_addr = 'ws://{{ kujira_ip }}:11857/websocket'
+{% include 'fragments/ports.toml.j2' %}
+
 
 rpc_timeout = '20s'
 account_prefix = 'kujira'

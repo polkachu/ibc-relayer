@@ -14,6 +14,25 @@
     group: '{{ ansible_user }}'
     mode: '0644'
 
+- name: get port prefixes
+  uri:
+    url: '{{ port_prefix_url }}'
+    method: GET
+    return_content: true
+    status_code: 200
+    body_format: json
+  register: port_prefixes
+  when: port_prefix_url is defined
+
+- name: populate hermes config
+  blockinfile:
+    dest: '/home/{{ ansible_user }}/.hermes/{{ target }}.toml'
+    block: "{{ lookup('template', 'fragments/{{ item.key }}.toml.j2') }}"
+    marker: '# {mark}'
+    marker_begin: 'Begin block: {{ item.key }}'
+    marker_end: 'End block: {{ item.key }}'
+  with_dict: '{{ supported_networks }}'
+
 - name: create hermes systemd unit
   become: true
   template:

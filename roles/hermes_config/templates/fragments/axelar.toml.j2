@@ -1,8 +1,7 @@
 [[chains]]
 id = 'axelar-dojo-1'
-rpc_addr = 'http://{{ axelar_ip }}:15157'
-grpc_addr = 'http://{{ axelar_ip }}:15190'
-websocket_addr = 'ws://{{ axelar_ip }}:15157/websocket'
+{% include 'fragments/ports.toml.j2' %}
+
 
 rpc_timeout = '20s'
 account_prefix = 'axelar'

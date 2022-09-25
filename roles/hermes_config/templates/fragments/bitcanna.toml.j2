@@ -1,8 +1,7 @@
 [[chains]]
 id = 'bitcanna-1'
-rpc_addr = 'http://{{ bitcanna_ip }}:13057'
-grpc_addr = 'http://{{ bitcanna_ip }}:13090'
-websocket_addr = 'ws://{{ bitcanna_ip }}:13057/websocket'
+{% include 'fragments/ports.toml.j2' %}
+
 
 rpc_timeout = '20s'
 account_prefix = 'bcna'

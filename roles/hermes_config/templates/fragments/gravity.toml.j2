@@ -1,8 +1,7 @@
 [[chains]]
 id = 'gravity-bridge-3'
-rpc_addr = 'http://{{ gravity_ip }}:14257'
-grpc_addr = 'http://{{ gravity_ip }}:14290'
-websocket_addr = 'ws://{{ gravity_ip }}:14257/websocket'
+{% include 'fragments/ports.toml.j2' %}
+
 
 rpc_timeout = '20s'
 account_prefix = 'gravity'

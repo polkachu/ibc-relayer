@@ -1,10 +1,7 @@
 [[chains]]
 id = 'phoenix-1'
+{% include 'fragments/ports.toml.j2' %}
 
-# API access to Terra node with indexing
-rpc_addr = 'http://{{ terra2_ip }}:11757'
-grpc_addr = 'http://{{ terra2_ip }}:11790'
-websocket_addr = 'ws://{{ terra2_ip }}:11757/websocket'
 
 rpc_timeout = '20s'
 account_prefix = 'terra'
