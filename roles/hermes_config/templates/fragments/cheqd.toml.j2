@@ -1,10 +1,10 @@
 [[chains]]
 id = 'cheqd-mainnet-1'
-
-# API access to Cheqd node with indexing
-grpc_addr = 'http://{{ cheqd_ip }}:16190'
-rpc_addr = 'http://{{ cheqd_ip }}:16157'
-websocket_addr = 'ws://{{ cheqd_ip }}:16157/websocket'
+{% set rpc_port = port_prefixes.json[item.key] if port_prefixes_url is defined else default_rpc %}
+{% set grpc_port = port_prefixes.json[item.key] if port_prefixes_url is defined else default_grpc %}
+rpc_addr = 'http:/{{ item.value.ip }}:{{ rpc_port }}57'
+grpc_addr = 'http:/{{ item.value.ip }}:{{ grpc_port }}90'
+websocket_addr = 'ws:/{{ item.value.ip }}:{{ rpc_port }}57/websocket'
 
 account_prefix = 'cheqd'
 address_type = {derivation = 'cosmos'}
