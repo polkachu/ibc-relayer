@@ -1,31 +1,6 @@
 ---
-- name: download hermes
-  get_url:
-    url: 'https://github.com/informalsystems/ibc-rs/releases/download/v{{ hermes_version }}/hermes-v{{ hermes_version }}-x86_64-unknown-linux-gnu.tar.gz'
-    dest: '/tmp/hermes.tar.gz'
-    mode: '0700'
-
-- name: unarchive hermes
-  unarchive:
-    src: '/tmp/hermes.tar.gz'
-    remote_src: yes
-    dest: '/tmp'
-
-- name: copy hermes binary
-  copy:
-    src: '/tmp/hermes'
-    dest: '/usr/local/bin/'
-    remote_src: true
-    owner: root
-    group: root
-    mode: 755
-
-- name: make hermes dir
-  file:
-    path: '/home/{{ ansible_user }}/.hermes/'
-    owner: '{{ ansible_user }}'
-    group: '{{ ansible_user }}'
-    state: directory
+- name: install hermes
+  import_tasks: install_hermes.yml
 
 - name: copy hermes config script
   template:

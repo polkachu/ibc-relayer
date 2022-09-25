@@ -5,4 +5,4 @@
   vars_files:
     - 'group_vars/{{ target }}.yml'
   roles:
-    - hermes_config
+    - hermes

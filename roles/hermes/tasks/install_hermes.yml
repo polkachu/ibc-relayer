@@ -1,0 +1,45 @@
+---
+- name: check if hermes is already installed
+  stat:
+    path: '/usr/local/bin/hermes'
+  register: hermes    
+
+- name: check if current hermes version is already installed
+  command: '/usr/local/bin/hermes version'
+  register: hermes_output
+  when: hermes.stat.exists
+
+- name: hermes output
+  debug:
+    var: hermes_output.stdout
+
+- name: download and install hermes
+  block:
+    - name: download hermes
+      get_url:
+        url: 'https://github.com/informalsystems/ibc-rs/releases/download/v{{ hermes_version }}/hermes-v{{ hermes_version }}-x86_64-unknown-linux-gnu.tar.gz'
+        dest: '/tmp/hermes.tar.gz'
+        mode: '0700'
+
+    - name: unarchive hermes
+      unarchive:
+        src: '/tmp/hermes.tar.gz'
+        remote_src: yes
+        dest: '/tmp'
+
+    - name: copy hermes binary
+      copy:
+        src: '/tmp/hermes'
+        dest: '/usr/local/bin/'
+        remote_src: true
+        owner: root
+        group: root
+        mode: 755
+
+    - name: make hermes dir
+      file:
+        path: '/home/{{ ansible_user }}/.hermes/'
+        owner: '{{ ansible_user }}'
+        group: '{{ ansible_user }}'
+        state: directory
+  when: not hermes.stat.exists or hermes_version not in hermes_output.stdout
