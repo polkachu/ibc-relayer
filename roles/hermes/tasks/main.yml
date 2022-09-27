@@ -2,14 +2,6 @@
 - name: install hermes
   import_tasks: install_hermes.yml
 
-- name: copy hermes config script
-  template:
-    src: '{{ target }}.toml.j2'
-    dest: '/home/{{ ansible_user }}/.hermes/{{ target }}.toml'
-    owner: '{{ ansible_user }}'
-    group: '{{ ansible_user }}'
-    mode: '0644'
-
 - name: get port prefixes
   uri:
     url: '{{ port_prefix_url }}'
@@ -19,6 +11,19 @@
     body_format: json
   register: port_prefixes
   when: port_prefix_url is defined
+
+- name: set response as json
+  set_fact:
+    prefixes: '{{ port_prefixes.content | from_json }}'
+  when: port_prefix_url is defined
+
+- name: copy hermes config script
+  template:
+    src: '{{ target }}.toml.j2'
+    dest: '/home/{{ ansible_user }}/.hermes/{{ target }}.toml'
+    owner: '{{ ansible_user }}'
+    group: '{{ ansible_user }}'
+    mode: '0644'
 
 - name: populate hermes config
   blockinfile:
