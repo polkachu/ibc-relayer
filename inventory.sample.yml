@@ -10,6 +10,7 @@ all:
     memo: 'Relayed with 💜 by Lavender.Five Nodes 🐝'
     default_rpc: 26657
     default_grpc: 9090
+    use_public_endpoints: false
     supported_networks:
       akash:
         ip: 1.2.3.4
