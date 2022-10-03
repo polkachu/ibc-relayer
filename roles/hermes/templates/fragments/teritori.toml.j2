@@ -1,0 +1,27 @@
+[[chains]]
+id = ''
+{% include 'fragments/ports.toml.j2' %}
+
+
+rpc_timeout = '20s'
+account_prefix = 'cosmos'
+key_name = 'relayer'
+store_prefix = 'ibc'
+default_gas = 100000
+max_gas = 400000
+gas_price = { price = 0.0, denom = 'utori' }
+gas_multiplier = 1.2
+max_msg_num = 30
+max_tx_size = 2097152
+clock_drift = '5s'
+max_block_time = '30s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+address_type = { derivation = 'cosmos' }
+memo_prefix = '{{ memo }}'
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', '*'],
+]
