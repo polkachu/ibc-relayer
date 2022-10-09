@@ -1,14 +1,4 @@
 ---
-- name: get port prefixes
-  uri:
-    url: '{{ port_prefix_url }}'
-    method: GET
-    return_content: true
-    status_code: 200
-    body_format: json
-  register: port_prefixes
-  when: port_prefix_url
-
 - name: make hermes dir
   file:
     path: '/home/{{ ansible_user }}/.hermes/'

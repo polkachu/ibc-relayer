@@ -1,4 +1,18 @@
 {% include 'fragments/header.toml.j2' %}
 
 
-TBD
+{% include 'fragments/testnet/nois.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['wasm.nois1j7m4f68lruceg5xq3gfkfdgdgz02vhvlq2p67vf9v3hwdydaat3sajzcy5', 'channel-0'], # Stargaze-CW20
+]
+
+{% include 'fragments/testnet/stargaze.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['wasm.stars1qec8jd0h4uxxz2eshekzp2wy49zvjdvskgre6f9yxrce2glczngsqhf95k', 'channel-35'], # Nois-CW20
+]
