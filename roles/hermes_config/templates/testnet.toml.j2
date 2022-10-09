@@ -1,12 +1,21 @@
 {% include 'fragments/header.toml.j2' %}
 
 
+{% include 'fragments/testnet/juno.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['wasm.juno1e7vs76markshus39eyfefh2y3t9guge4t0kvqya3q6vamgsejh4q8lxtq9', 'channel-9'], # Juno-CW20
+]
+
 {% include 'fragments/testnet/nois.toml.j2' %}
 
 [chains.packet_filter]
 policy = 'allow'
 list = [
   ['wasm.nois1j7m4f68lruceg5xq3gfkfdgdgz02vhvlq2p67vf9v3hwdydaat3sajzcy5', 'channel-0'], # Stargaze-CW20
+  ['wasm.nois1j7m4f68lruceg5xq3gfkfdgdgz02vhvlq2p67vf9v3hwdydaat3sajzcy5', 'channel-9'], # Juno-CW20
 ]
 
 {% include 'fragments/testnet/stargaze.toml.j2' %}
