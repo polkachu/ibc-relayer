@@ -6,7 +6,10 @@
 [chains.packet_filter]
 policy = 'allow'
 list = [
+  ['transfer', 'channel-6'], # Axelar
   ['transfer', 'channel-2'], # Crescent
+  ['transfer', 'channel-5'], # Cosmos
+  ['transfer', 'channel-4'], # Gravity
   ['transfer', 'channel-1'], # Osmosis
 ]
 
@@ -24,9 +27,13 @@ list = [
 [chains.packet_filter]
 policy = 'allow'
 list = [
+  ['transfer', 'channel-40'], # Agoric
+  ['transfer', 'channel-2'], # Cosmos
   ['transfer', 'channel-7'], # Crescent
+  ['transfer', 'channel-22'], # Evmos
   ['transfer', 'channel-14'], # Kujira
   ['transfer', 'channel-10'], # Injective
+  ['transfer', 'channel-3'], # Osmosis
   ['transfer', 'channel-18'], # Stargaze
   ['transfer', 'channel-33'], # Stride
   ['transfer', 'channel-36'], # Umee
@@ -40,6 +47,15 @@ list = [
   ['transfer', 'channel-10'], # Juno
   ['transfer', 'channel-1'], # Osmosis
 ]
+
+{% include 'fragments/mainnet/canto.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-2'], # Cosmos
+]
+
 
 {% include 'fragments/mainnet/chihuahua.toml.j2' %}
 
@@ -57,6 +73,9 @@ list = [
 [chains.packet_filter]
 policy = 'allow'
 list = [
+  ['transfer', 'channel-405'], # Agoric
+  ['transfer', 'channel-293'], # Axelar
+  ['transfer', 'channel-358'], # Canto
   ['transfer', 'channel-326'], # Crescent
   ['transfer', 'channel-292'], # Evmos
   ['transfer', 'channel-220'], # Injective
@@ -83,12 +102,14 @@ list = [
 [chains.packet_filter]
 policy = 'allow'
 list = [
+  ['transfer', 'channel-21'], # Axelar
   ['transfer', 'channel-0'], # Cosmos
   ['transfer', 'channel-10'], # Injective
   ['transfer', 'channel-18'], # Kujira
   ['transfer', 'channel-5'], # Juno
   ['transfer', 'channel-0'], # Osmosis
   ['transfer', 'channel-25'], # Stride
+  ['transfer', 'channel-35'], # Teritori
 ]
 
 {% include 'fragments/mainnet/gravity.toml.j2' %}
@@ -96,6 +117,7 @@ list = [
 [chains.packet_filter]
 policy = 'allow'
 list = [
+  ['transfer', 'channel-91'], # Agoric
   ['transfer', 'channel-34'], # Chihuahua
   ['transfer', 'channel-62'], # Crescent
   ['transfer', 'channel-8'], # Juno
@@ -165,6 +187,7 @@ list = [
 policy = 'allow'
 list = [
   ['transfer', 'channel-320'], # Agoric
+  ['transfer', 'channel-208'], # Axelar
   ['transfer', 'channel-1'], # Akash
   ['transfer', 'channel-51'], # Bitcanna
   ['transfer', 'channel-113'], # Chihuahua
@@ -179,6 +202,7 @@ list = [
   ['transfer', 'channel-47'], # Sifchain
   ['transfer', 'channel-75'], # Stargaze
   ['transfer', 'channel-326'], # Stride
+  ['transfer', 'channel-362'], # Teritori
   ['transfer', 'channel-184'], # Umee
 ]
 
@@ -214,6 +238,15 @@ list = [
   ['transfer', 'channel-6'], # Injective
   ['transfer', 'channel-8'], # Kujira
   ['transfer', 'channel-5'], # Osmosis
+]
+
+{% include 'fragments/mainnet/teritori.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-0'], # Osmosis
+  ['transfer', 'channel-1'], # Evmos
 ]
 
 {% include 'fragments/mainnet/umee.toml.j2' %}
