@@ -1,15 +1,15 @@
 [[chains]]
-id = ''
+id = 'teritori-1'
 {% include 'fragments/ports.toml.j2' %}
 
 
 rpc_timeout = '20s'
-account_prefix = 'cosmos'
+account_prefix = 'tori'
 key_name = 'relayer'
 store_prefix = 'ibc'
 default_gas = 100000
-max_gas = 400000
-gas_price = { price = 0.0, denom = 'utori' }
+max_gas = 500000
+gas_price = { price = 0.0001, denom = 'utori' }
 gas_multiplier = 1.2
 max_msg_num = 30
 max_tx_size = 2097152
