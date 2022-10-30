@@ -1,6 +1,32 @@
 {% include 'fragments/header.toml.j2' %}
 
 
+{% include 'fragments/testnet/axelar.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-61'], # Evmos
+  ['transfer', 'channel-22'], # Osmosis
+]
+
+{% include 'fragments/testnet/evmos.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-22'], # Axelar
+]
+
+{% include 'fragments/testnet/osmosis.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-312'], # Axelar
+]
+
+
 {% include 'fragments/testnet/juno.toml.j2' %}
 
 [chains.packet_filter]

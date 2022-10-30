@@ -1,0 +1,22 @@
+[[chains]]
+id = 'evmos_9000-4'
+rpc_addr = 'http://{{ testnet_evmos_ip }}:13457'
+grpc_addr = 'http://{{ testnet_evmos_ip }}:13490'
+websocket_addr = 'ws://{{ testnet_evmos_ip }}:13457/websocket'
+
+rpc_timeout = '20s'
+account_prefix = 'evmos'
+key_name = '{{ key_name }}'
+store_prefix = 'ibc'
+address_type = { derivation = 'ethermint', proto_type = { pk_type = '/ethermint.crypto.v1.ethsecp256k1.PubKey' } }
+default_gas = 400000
+max_gas = 4000000
+gas_price = { price = 20000000000, denom = 'aevmos' }
+gas_multiplier = 1.2
+max_msg_num = 15
+max_tx_size = 180000
+clock_drift = '15s'
+max_block_time = '10s'
+trusting_period = '7days'
+memo_prefix = '{{ memo }}'
+trust_threshold = { numerator = '1', denominator = '3'}
