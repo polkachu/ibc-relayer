@@ -1,0 +1,22 @@
+[[chains]]
+id = 'jackal-1'
+rpc_addr = 'http://{{ jackal_ip }}:17557'
+grpc_addr = 'http://{{ jackal_ip }}:17590'
+websocket_addr = 'ws://{{ jackal_ip }}:17557/websocket'
+
+rpc_timeout = '20s'
+account_prefix = 'jkl'
+key_name = '{{ key_name }}'
+address_type = { derivation = 'cosmos' }
+store_prefix = 'ibc'
+default_gas = 300000
+max_gas = 3500000
+gas_price = { price = 0.002, denom = 'ujkl' }
+gas_multiplier = 1.5
+max_msg_num = 30
+max_tx_size = 2000000
+clock_drift = '45s'
+max_block_time = '10s'
+trusting_period = '10days'
+memo_prefix = '{{ memo }}'
+trust_threshold = { numerator = '1', denominator = '3' }

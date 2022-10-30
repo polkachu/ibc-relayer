@@ -162,6 +162,14 @@ list = [
   ['transfer', 'channel-32'], # Stride
 ]
 
+{% include 'fragments/mainnet/jackal.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-0'], # Osmosis
+]
+
 {% include 'fragments/mainnet/juno.toml.j2' %}
 
 [chains.packet_filter]
@@ -197,6 +205,7 @@ list = [
   ['transfer', 'channel-204'], # Evmos
   ['transfer', 'channel-144'], # Gravity
   ['transfer', 'channel-122'], # Injective
+  ['transfer', 'channel-412'], # Jackal
   ['transfer', 'channel-42'], # Juno
   ['transfer', 'channel-169'], # Juno CW-20
   ['transfer', 'channel-77'], # Kichain
