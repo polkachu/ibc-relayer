@@ -1,0 +1,22 @@
+[[chains]]
+id = 'provider'
+rpc_addr = 'http://{{ goc_provider_ip }}:14957'
+grpc_addr = 'http://{{ goc_provider_ip }}:14990'
+websocket_addr = 'ws://{{ goc_provider_ip }}:14957/websocket'
+
+rpc_timeout = '20s'
+account_prefix = 'cosmos'
+key_name = '{{ key_name }}'
+address_type = { derivation = 'cosmos' }
+store_prefix = 'ibc'
+default_gas = 300000
+max_gas = 3500000
+gas_price = { price = 0, denom = 'uprov' }
+gas_multiplier = 1.1
+max_msg_num = 20
+max_tx_size = 180000
+clock_drift = '10s'
+max_block_time = '30s'
+trusting_period = '64h'
+memo_prefix = '{{ memo }}'
+trust_threshold = { numerator = '1', denominator = '3' }

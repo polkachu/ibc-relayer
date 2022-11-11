@@ -1,0 +1,23 @@
+{% include 'fragments/header.toml.j2' %}
+
+
+{% include 'fragments/goc/provider.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+]
+
+{% include 'fragments/goc/apollo.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+]
+
+{% include 'fragments/goc/sputnik.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+]
