@@ -1,0 +1,22 @@
+[[chains]]
+id = 'core-1'
+rpc_addr = 'http://{{ persistence_ip }}:15457'
+grpc_addr = 'http://{{ persistence_ip }}:15490'
+websocket_addr = 'ws://{{ persistence_ip }}:15457/websocket'
+
+rpc_timeout = '20s'
+account_prefix = 'persistence'
+key_name = '{{ key_name }}'
+address_type = { derivation = 'cosmos' }
+store_prefix = 'ibc'
+default_gas = 300000
+max_gas = 5000000
+gas_price = { price = 0.005, denom = 'uxprt' }
+gas_multiplier = 1.4
+max_msg_num = 30
+max_tx_size = 1800000
+clock_drift = '15s'
+max_block_time = '10s'
+trusting_period = '7days'
+memo_prefix = '{{ memo }}'
+trust_threshold = { numerator = '1', denominator = '3' }
