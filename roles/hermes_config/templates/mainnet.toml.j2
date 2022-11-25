@@ -215,6 +215,7 @@ list = [
   ['transfer', 'channel-77'], # Kichain
   ['transfer', 'channel-259'], # Kujira
   ['transfer', 'channel-47'], # Sifchain
+  ['transfer', 'channel-165'], # Sommelier
   ['transfer', 'channel-75'], # Stargaze
   ['transfer', 'channel-326'], # Stride
   ['transfer', 'channel-362'], # Teritori
@@ -236,6 +237,14 @@ policy = 'allow'
 list = [
   ['transfer', 'channel-14'], # Juno
   ['transfer', 'channel-17'], # Osmosis
+]
+
+{% include 'fragments/mainnet/sommelier.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-0'], # Osmosis
 ]
 
 {% include 'fragments/mainnet/stargaze.toml.j2' %}
