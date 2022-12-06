@@ -37,6 +37,7 @@ list = [
   ['transfer', 'channel-108'], # Persistence
   ['transfer', 'channel-18'], # Stargaze
   ['transfer', 'channel-33'], # Stride
+  ['transfer', 'channel-11'], # Terra
   ['transfer', 'channel-36'], # Umee
 ]
 
@@ -280,6 +281,14 @@ list = [
   ['transfer', 'channel-10'], # Cosmos
   ['transfer', 'channel-1'], # Evmos
   ['transfer', 'channel-0'], # Osmosis
+]
+
+{% include 'fragments/mainnet/terra2.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-6'], # Axelar
 ]
 
 {% include 'fragments/mainnet/umee.toml.j2' %}
