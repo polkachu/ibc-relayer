@@ -83,6 +83,7 @@ list = [
   ['transfer', 'channel-220'], # Injective
   ['transfer', 'channel-343'], # Kujira
   ['transfer', 'channel-141'], # Osmosis
+  ['transfer', 'channel-467'], # Quicksilver
   ['transfer', 'channel-391'], # Stride
   ['transfer', 'channel-431'], # Teritori
 ]
@@ -217,6 +218,7 @@ list = [
   ['transfer', 'channel-169'], # Juno CW-20
   ['transfer', 'channel-77'], # Kichain
   ['transfer', 'channel-259'], # Kujira
+  ['transfer', 'channel-522'], # Quicksilver
   ['transfer', 'channel-47'], # Sifchain
   ['transfer', 'channel-165'], # Sommelier
   ['transfer', 'channel-75'], # Stargaze
@@ -231,6 +233,16 @@ list = [
 policy = 'allow'
 list = [
     ['transfer', 'channel-97'], # Axelar
+]
+
+{% include 'fragments/mainnet/quicksilver.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+    ['transfer', 'channel-0'], # Stargaze
+    ['transfer', 'channel-1'], # Cosmos
+    ['transfer', 'channel-2'], # Osmosis
 ]
 
 {% include 'fragments/mainnet/sifchain.toml.j2' %}
@@ -261,6 +273,7 @@ list = [
   ['transfer', 'channel-49'], # Kujira
   ['transfer', 'channel-5'], # Juno
   ['transfer', 'channel-0'], # Osmosis
+  ['transfer', 'channel-124'], # Quicksilver
 ]
 
 {% include 'fragments/mainnet/stride.toml.j2' %}

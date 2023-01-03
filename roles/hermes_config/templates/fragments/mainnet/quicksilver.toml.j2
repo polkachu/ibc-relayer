@@ -1,0 +1,22 @@
+[[chains]]
+id = 'quicksilver-2'
+rpc_addr = 'http://{{ quicksilver_ip }}:11157'
+grpc_addr = 'http://{{ quicksilver_ip }}:11190'
+websocket_addr = 'ws://{{ quicksilver_ip }}:11157/websocket'
+
+rpc_timeout = '20s'
+account_prefix = 'quick'
+key_name = '{{ key_name }}'
+store_prefix = 'ibc'
+address_type = { derivation = 'cosmos' }
+default_gas = 300000
+max_gas = 3500000
+gas_price = { price = 0.000, denom = 'uqck' }
+gas_multiplier = 1.2
+max_msg_num = 30
+max_tx_size = 1800000
+clock_drift = '15s'
+max_block_time = '10s'
+trusting_period = '7days'
+memo_prefix = '{{ memo }}'
+trust_threshold = { numerator = '1', denominator = '3' }
