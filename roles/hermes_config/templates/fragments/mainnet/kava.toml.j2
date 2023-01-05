@@ -1,0 +1,22 @@
+[[chains]]
+id = 'kava_2222-10'
+rpc_addr = 'http:/{{ kava_ip }}:13957'
+grpc_addr = 'http:/{{ kava_ip }}:13990'
+websocket_addr = 'ws:/{{ kava_ip }}:13957/websocket'
+
+rpc_timeout = '20s'
+account_prefix = 'kava'
+key_name = '{{ key_name }}'
+address_type = { derivation = 'cosmos' }
+store_prefix = 'ibc'
+default_gas = 100000
+max_gas =  1000000
+gas_price = { price = 0.001, denom = 'ukava' }
+gas_multiplier = 1.2
+max_msg_num = 30
+max_tx_size = 1800000
+clock_drift = '15s'
+max_block_time = '10s'
+trusting_period = '7days'
+memo_prefix = '{{ memo }}'
+trust_threshold = { numerator = '1', denominator = '3' }

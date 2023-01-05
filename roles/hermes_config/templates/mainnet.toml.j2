@@ -19,6 +19,7 @@ list = [
 policy = 'allow'
 list = [
   ['transfer', 'channel-35'], # Juno
+  ['transfer', 'channel-37'], # kava
   ['transfer', 'channel-9'], # Osmosis
 ]
 
@@ -81,6 +82,7 @@ list = [
   ['transfer', 'channel-326'], # Crescent
   ['transfer', 'channel-292'], # Evmos
   ['transfer', 'channel-220'], # Injective
+  ['transfer', 'channel-277'], # Kava
   ['transfer', 'channel-343'], # Kujira
   ['transfer', 'channel-141'], # Osmosis
   ['transfer', 'channel-467'], # Quicksilver
@@ -155,6 +157,17 @@ list = [
   ['transfer', 'channel-0'], # Osmosis
 ]
 
+{% include 'fragments/mainnet/kava.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-5'], # Akash
+  ['transfer', 'channel-0'], # Cosmos
+  ['transfer', 'channel-1'], # Osmosis
+]
+
+
 {% include 'fragments/mainnet/kujira.toml.j2' %}
 
 [chains.packet_filter]
@@ -216,6 +229,7 @@ list = [
   ['transfer', 'channel-412'], # Jackal
   ['transfer', 'channel-42'], # Juno
   ['transfer', 'channel-169'], # Juno CW-20
+  ['transfer', 'channel-143'], # Kava
   ['transfer', 'channel-77'], # Kichain
   ['transfer', 'channel-259'], # Kujira
   ['transfer', 'channel-522'], # Quicksilver
