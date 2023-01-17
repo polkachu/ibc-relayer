@@ -1,0 +1,22 @@
+[[chains]]
+id = 'dimension_37-1'
+rpc_addr = 'http://{{ xpla_ip }}:20157'
+grpc_addr = 'http://{{ xpla_ip }}:20190'
+websocket_addr = 'ws://{{ xpla_ip }}:20157/websocket'
+
+rpc_timeout = '20s'
+account_prefix = 'xpla'
+key_name = '{{ key_name }}'
+address_type = { derivation = 'cosmos' }
+store_prefix = 'ibc'
+default_gas = 200000
+max_gas = 10000000
+gas_price = { price = 0.000, denom = 'uxpla' }
+gas_multiplier = 1.2
+max_msg_num = 30
+max_tx_size = 800000
+clock_drift = '15s'
+max_block_time = '10s'
+trusting_period = '6days'
+memo_prefix = '{{ memo }}'
+trust_threshold = { numerator = '1', denominator = '3' }

@@ -41,6 +41,7 @@ list = [
   ['transfer', 'channel-33'], # Stride
   ['transfer', 'channel-11'], # Terra
   ['transfer', 'channel-36'], # Umee
+  ['transfer', 'channel-49'], # XPLA
 ]
 
 {% include 'fragments/mainnet/bitcanna.toml.j2' %}
@@ -116,6 +117,7 @@ list = [
   ['transfer', 'channel-18'], # Kujira
   ['transfer', 'channel-5'], # Juno
   ['transfer', 'channel-0'], # Osmosis
+  ['transfer', 'channel-37'], # Quicksilver
   ['transfer', 'channel-25'], # Stride
   ['transfer', 'channel-35'], # Teritori
 ]
@@ -256,6 +258,7 @@ list = [
 [chains.packet_filter]
 policy = 'allow'
 list = [
+    ['transfer', 'channel-7'], # Evmos
     ['transfer', 'channel-0'], # Stargaze
     ['transfer', 'channel-1'], # Cosmos
     ['transfer', 'channel-2'], # Osmosis
@@ -343,4 +346,12 @@ list = [
   ['transfer', 'channel-9'], # Gravity
   ['transfer', 'channel-2'], # Juno
   ['transfer', 'channel-0'], # Osmosis
+]
+
+{% include 'fragments/mainnet/xpla.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-0'], # Axelar
 ]
