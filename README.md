@@ -26,7 +26,7 @@ ansible-playbook main_hermes_install.yml
 ansible-playbook main_rly_install.yml
 ```
 
-### hyperspace installation
+### Hyperspace installation
 
 ```bash
 ansible-playbook main_hyperspace_install.yml
