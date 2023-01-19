@@ -1,0 +1,6 @@
+---
+- name: Main
+  hosts: 'relayer'
+  gather_facts: false
+  roles:
+    - hyperspace_install

@@ -1,0 +1,37 @@
+---
+- name: install apt packages
+  become: true
+  apt:
+    name: '{{item}}'
+    state: present
+    update_cache: yes
+  loop:
+    - cmake
+    - protobuf-compiler
+
+- name: Clone centauri repo
+  git:
+    repo: 'https://github.com/ComposableFi/centauri'
+    dest: '{{ user_dir }}/centauri'
+    update: yes
+    force: yes
+    recursive: no
+
+- name: Install hyperspace
+  command: '{{ item }}'
+  args:
+    chdir: '{{ user_dir }}/centauri/hyperspace'
+  with_items:
+    - 'make build-release-hyperspace'
+  environment:
+    PATH: '{{ path }}'
+
+- name: copy hyperspace binary
+  become: true
+  copy:
+    src: '{{ user_dir }}/centauri/target/release/hyperspace'
+    dest: '/usr/local/bin/'
+    remote_src: true
+    owner: root
+    group: root
+    mode: 755

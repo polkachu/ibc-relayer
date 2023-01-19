@@ -2,7 +2,8 @@
 
 ## Design Philosophy
 
-1. Support both hermes and rly
+1. Support hermes, rly and hyperspace installation
+1. So far, only Hermes configuration is installed since that's the one we use
 1. Make config file extensible by DRY principle
 
 ## Guide
@@ -13,16 +14,22 @@ First copy it to your own inventory file so you can customize it to suit your ne
 cp inventory.sample inventory
 ```
 
+### Hermes installation
+
+```bash
+ansible-playbook main_hermes_install.yml
+```
+
 ### rly installation
 
 ```bash
 ansible-playbook main_rly_install.yml
 ```
 
-### Hermes installation
+### hyperspace installation
 
 ```bash
-ansible-playbook main_hermes_install.yml
+ansible-playbook main_hyperspace_install.yml
 ```
 
 ### Hermes deployment
