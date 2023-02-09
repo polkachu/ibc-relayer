@@ -36,7 +36,7 @@ list = [
   ['transfer', 'channel-14'], # Kujira
   ['transfer', 'channel-10'], # Injective
   ['transfer', 'channel-3'], # Osmosis
-  ['transfer', 'channel-108'], # Persistence
+  ['transfer', 'channel-42'], # Persistence
   ['transfer', 'channel-18'], # Stargaze
   ['transfer', 'channel-33'], # Stride
   ['transfer', 'channel-11'], # Terra
@@ -186,6 +186,7 @@ list = [
   ['transfer', 'channel-23'], # Evmos
   ['transfer', 'channel-50'], # Gravity
   ['transfer', 'channel-1'], # Juno
+  ['transfer', 'channel-55'], # Mars
   ['transfer', 'channel-3'], # Osmosis
   ['transfer', 'channel-7'], # Stargaze
   ['transfer', 'channel-32'], # Stride
@@ -213,12 +214,24 @@ list = [
   ['transfer', 'channel-31'], # Gravity
   ['transfer', 'channel-58'], # Kichain
   ['transfer', 'channel-87'], # kujira
+  ['transfer', 'channel-209'], # mars
   ['wasm.juno1v4887y83d6g28puzvt8cl0f3cdhd3y6y9mpysnsp3k8krdm7l6jqgm0rkn', 'channel-47'], # Osmosis-CW20
   ['transfer', 'channel-0'], # Osmosis
   ['transfer', 'channel-33'], # Persistence
   ['transfer', 'channel-5'], # Sifchain
   ['transfer', 'channel-20'], # Stargaze
   ['transfer', 'channel-62'], # Umee
+]
+
+{% include 'fragments/mainnet/mars.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-3'], # Juno
+  ['transfer', 'channel-0'], # Kujira
+  ['transfer', 'channel-1'], # Osmosis
+  ['transfer', 'channel-2'], # Terra2
 ]
 
 {% include 'fragments/mainnet/osmosis.toml.j2' %}
@@ -242,6 +255,7 @@ list = [
   ['transfer', 'channel-143'], # Kava
   ['transfer', 'channel-77'], # Kichain
   ['transfer', 'channel-259'], # Kujira
+  ['transfer', 'channel-557'], # Mars
   ['transfer', 'channel-4'], # Persistence
   ['transfer', 'channel-522'], # Quicksilver
   ['transfer', 'channel-47'], # Sifchain
@@ -257,7 +271,7 @@ list = [
 [chains.packet_filter]
 policy = 'allow'
 list = [
-    ['transfer', 'channel-97'], # Axelar
+    ['transfer', 'channel-51'], # Axelar
     ['transfer', 'channel-24'], # Cosmos
     ['transfer', 'channel-68'], # Crescent
     ['transfer', 'channel-41'], # Injective
@@ -347,6 +361,7 @@ list = [
   ['transfer', 'channel-45'], # Akash
   ['transfer', 'channel-6'], # Axelar
   ['transfer', 'channel-42'], # Injective
+  ['transfer', 'channel-78'], # Mars
 ]
 
 {% include 'fragments/mainnet/umee.toml.j2' %}
