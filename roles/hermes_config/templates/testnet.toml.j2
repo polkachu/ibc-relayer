@@ -52,6 +52,7 @@ list = [
 policy = 'allow'
 list = [
   ['transfer', 'channel-22'], # Axelar
+  ['transfer', 'channel-237'], # Stargaze
 ]
 
 {% include 'fragments/testnet/xpla.toml.j2' %}
@@ -85,5 +86,6 @@ list = [
 [chains.packet_filter]
 policy = 'allow'
 list = [
+  ['transfer', 'channel-146'], # Terra
   ['wasm.stars1jza6sr0y2gcnw8v8yhu9mpyv23gs8znfucmea3jj2r85fnfptzdqptgtkp', 'channel-82'], # Nois-CW20
 ]
