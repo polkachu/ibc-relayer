@@ -1,22 +1,22 @@
 [[chains]]
-id = 'uni-6'
-rpc_addr = 'http://{{ testnet_juno_ip }}:12657'
-grpc_addr = 'http://{{ testnet_juno_ip }}:12690'
-websocket_addr = 'ws://{{ testnet_juno_ip }}:12657/websocket'
+id = 'qsr-questnet-04'
+rpc_addr = 'http://{{ testnet_quasar_ip }}:18257'
+grpc_addr = 'http://{{ testnet_quasar_ip }}:18290'
+websocket_addr = 'ws://{{ testnet_quasar_ip }}:18257/websocket'
 
 rpc_timeout = '20s'
-account_prefix = 'juno'
+account_prefix = 'quasar'
 key_name = '{{ key_name }}'
 store_prefix = 'ibc'
 address_type = { derivation = 'cosmos' }
 default_gas = 300000
-max_gas = 4000000
-gas_price = { price = 0.025, denom = 'ujunox' }
+max_gas = 75000000
+gas_price = { price = 0.025, denom = 'uqsr' }
 gas_multiplier = 1.3
 max_msg_num = 30
 max_tx_size = 1800000
 clock_drift = '15s'
 max_block_time = '10s'
-trusting_period = '7days'
+trusting_period = '2days'
 memo_prefix = '{{ memo }}'
 trust_threshold = { numerator = '1', denominator = '3' }
