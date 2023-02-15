@@ -73,6 +73,7 @@ list = [
   ['transfer', 'channel-11'], # Juno
   ['transfer', 'channel-7'], # Osmosis
   ['transfer', 'channel-34'], # Terra2
+  ['transfer', 'channel-36'], # Whitewhale
 ]
 
 {% include 'fragments/mainnet/cosmos.toml.j2' %}
@@ -158,6 +159,7 @@ list = [
   ['transfer', 'channel-93'], # Sommelier
   ['transfer', 'channel-89'], # Stride
   ['transfer', 'channel-95'], # Terra2
+  ['transfer', 'channel-102'], # Whitewhale
 ]
 
 {% include 'fragments/mainnet/kichain.toml.j2' %}
@@ -227,6 +229,7 @@ list = [
   ['transfer', 'channel-20'], # Stargaze
   ['transfer', 'channel-86'], # Terra
   ['transfer', 'channel-62'], # Umee
+  ['transfer', 'channel-210'], # Whitewhale
 ]
 
 {% include 'fragments/mainnet/mars.toml.j2' %}
@@ -271,6 +274,7 @@ list = [
   ['transfer', 'channel-362'], # Teritori
   ['transfer', 'channel-251'], # Terra2
   ['transfer', 'channel-184'], # Umee
+  ['transfer', 'channel-642'], # Whitewhale
 ]
 
 {% include 'fragments/mainnet/persistence.toml.j2' %}
@@ -376,6 +380,7 @@ list = [
   ['transfer', 'channel-78'], # Mars
   ['transfer', 'channel-1'], # Osmosis
   ['transfer', 'channel-46'], # Stride
+  ['transfer', 'channel-86'], # Whitewhale
 ]
 
 {% include 'fragments/mainnet/umee.toml.j2' %}
@@ -394,6 +399,11 @@ list = [
 [chains.packet_filter]
 policy = 'allow'
 list = [
+  ['transfer', 'channel-7'], # Chihuahua
+  ['transfer', 'channel-3'], # Injective
+  ['transfer', 'channel-1'], # Juno
+  ['transfer', 'channel-5'], # Osmosis
+  ['transfer', 'channel-0'], # Terra2
 ]
 
 {% include 'fragments/mainnet/xpla.toml.j2' %}
