@@ -73,7 +73,7 @@ list = [
   ['transfer', 'channel-11'], # Juno
   ['transfer', 'channel-7'], # Osmosis
   ['transfer', 'channel-34'], # Terra2
-  ['transfer', 'channel-36'], # Whitewhale
+  ['transfer', 'channel-36'], # Migaloo
 ]
 
 {% include 'fragments/mainnet/cosmos.toml.j2' %}
@@ -159,7 +159,7 @@ list = [
   ['transfer', 'channel-93'], # Sommelier
   ['transfer', 'channel-89'], # Stride
   ['transfer', 'channel-95'], # Terra2
-  ['transfer', 'channel-102'], # Whitewhale
+  ['transfer', 'channel-102'], # Migaloo
 ]
 
 {% include 'fragments/mainnet/kichain.toml.j2' %}
@@ -193,6 +193,7 @@ list = [
   ['transfer', 'channel-50'], # Gravity
   ['transfer', 'channel-1'], # Juno
   ['transfer', 'channel-55'], # Mars
+  ['transfer', 'channel-58'], # Migaloo
   ['transfer', 'channel-3'], # Osmosis
   ['transfer', 'channel-56'], # Persistence
   ['transfer', 'channel-7'], # Stargaze
@@ -230,7 +231,7 @@ list = [
   ['transfer', 'channel-20'], # Stargaze
   ['transfer', 'channel-86'], # Terra
   ['transfer', 'channel-62'], # Umee
-  ['transfer', 'channel-210'], # Whitewhale
+  ['transfer', 'channel-210'], # Migaloo
 ]
 
 {% include 'fragments/mainnet/mars.toml.j2' %}
@@ -242,6 +243,19 @@ list = [
   ['transfer', 'channel-0'], # Kujira
   ['transfer', 'channel-1'], # Osmosis
   ['transfer', 'channel-2'], # Terra2
+]
+
+{% include 'fragments/mainnet/migaloo.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-7'], # Chihuahua
+  ['transfer', 'channel-3'], # Injective
+  ['transfer', 'channel-1'], # Juno
+  ['transfer', 'channel-8'], # Kujira
+  ['transfer', 'channel-5'], # Osmosis
+  ['transfer', 'channel-0'], # Terra2
 ]
 
 {% include 'fragments/mainnet/osmosis.toml.j2' %}
@@ -275,7 +289,7 @@ list = [
   ['transfer', 'channel-362'], # Teritori
   ['transfer', 'channel-251'], # Terra2
   ['transfer', 'channel-184'], # Umee
-  ['transfer', 'channel-642'], # Whitewhale
+  ['transfer', 'channel-642'], # Migaloo
 ]
 
 {% include 'fragments/mainnet/persistence.toml.j2' %}
@@ -386,8 +400,8 @@ list = [
   ['transfer', 'channel-78'], # Mars
   ['transfer', 'channel-1'], # Osmosis
   ['transfer', 'channel-46'], # Stride
-  ['transfer', 'channel-86'], # Whitewhale
-  ['wasm.terra1e0mrzy8077druuu42vs0hu7ugguade0cj65dgtauyaw4gsl4kv0qtdf2au', 'channel-87'], # Whitewhale-ampLuna
+  ['transfer', 'channel-86'], # Migaloo
+  ['wasm.terra1e0mrzy8077druuu42vs0hu7ugguade0cj65dgtauyaw4gsl4kv0qtdf2au', 'channel-87'], # Migaloo-ampLuna
 ]
 
 {% include 'fragments/mainnet/umee.toml.j2' %}
@@ -399,18 +413,6 @@ list = [
   ['transfer', 'channel-9'], # Gravity
   ['transfer', 'channel-2'], # Juno
   ['transfer', 'channel-0'], # Osmosis
-]
-
-{% include 'fragments/mainnet/whitewhale.toml.j2' %}
-
-[chains.packet_filter]
-policy = 'allow'
-list = [
-  ['transfer', 'channel-7'], # Chihuahua
-  ['transfer', 'channel-3'], # Injective
-  ['transfer', 'channel-1'], # Juno
-  ['transfer', 'channel-5'], # Osmosis
-  ['transfer', 'channel-0'], # Terra2
 ]
 
 {% include 'fragments/mainnet/xpla.toml.j2' %}
