@@ -96,6 +96,9 @@ list = [
 policy = 'allow'
 list = [
     ['transfer', 'channel-0'], # Quasar-Osmosis
+    ['wasm.quasar1nc5tatafv6eyq7llkr2gv50ff9e22mnf70qgjlv737ktmt4eswrqgsk7e6', '*'],
+    ['wasm.quasar1wug8sewp6cedgkmrmvhl3lf3tulagm9hnvy8p0rppz9yjw0g4wtqu5prdk', '*'],
+    ['wasm.quasar1xr3rq8yvd7qplsw5yx90ftsr2zdhg4e9z60h5duusgxpv72hud3syhezhc', '*'],
 ]
 
 {% include 'fragments/testnet/quasar-osmosis.toml.j2' %}
@@ -104,4 +107,6 @@ list = [
 policy = 'allow'
 list = [
   ['transfer', 'channel-0'], # Quasar
+  ['transfer', 'channel-10'], # Quasar
+  ['transfer', 'channel-11'], # Quasar
 ]
