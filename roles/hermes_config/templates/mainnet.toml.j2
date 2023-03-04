@@ -112,6 +112,15 @@ list = [
   ['transfer', 'channel-27'], # Terra2
 ]
 
+{% include 'fragments/mainnet/cryptocom.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+    ['transfer', 'channel-10'], # Osmosis
+]
+
+
 {% include 'fragments/mainnet/evmos.toml.j2' %}
 
 [chains.packet_filter]
@@ -274,6 +283,7 @@ list = [
   ['transfer', 'channel-51'], # Bitcanna
   ['transfer', 'channel-113'], # Chihuahua
   ['transfer', 'channel-0'], # Cosmos
+  ['transfer', 'channel-5'], # Cryptocom
   ['transfer', 'channel-297'], # Crescent
   ['transfer', 'channel-204'], # Evmos
   ['transfer', 'channel-144'], # Gravity
