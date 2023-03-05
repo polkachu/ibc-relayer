@@ -9,14 +9,13 @@ account_prefix = 'cro'
 key_name = '{{ key_name }}'
 address_type = { derivation = 'cosmos' }
 store_prefix = 'ibc'
-default_gas = 200000
-max_gas = 10000000
+max_gas = 1000000
 gas_price = { price = 0.025, denom = 'basecro' }
-gas_multiplier = 1.2
+gas_multiplier = 1.1
 max_msg_num = 30
-max_tx_size = 400000
-clock_drift = '15s'
+max_tx_size = 45000
+clock_drift = '5s'
 max_block_time = '10s'
-trusting_period = '18days'
+trusting_period = '21days'
 memo_prefix = '{{ memo }}'
 trust_threshold = { numerator = '1', denominator = '3' }
