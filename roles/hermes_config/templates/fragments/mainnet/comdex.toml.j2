@@ -1,0 +1,22 @@
+[[chains]]
+id = 'comdex-1'
+rpc_addr = 'http://{{ comdex_ip }}:13157'
+grpc_addr = 'http://{{ comdex_ip }}:13190'
+websocket_addr = 'ws://{{ comdex_ip }}:13157/websocket'
+
+rpc_timeout = '20s'
+account_prefix = 'comdex'
+key_name = '{{ key_name }}'
+address_type = { derivation = 'cosmos' }
+store_prefix = 'ibc'
+default_gas = 500000
+max_gas = 500000
+gas_price = { price = 0.0025, denom = 'ucmdx' }
+gas_multiplier = 1.8
+max_msg_num = 30
+max_tx_size = 2097152
+clock_drift = '1000s'
+max_block_time = '10s'
+trusting_period = '14days'
+memo_prefix = '{{ memo }}'
+trust_threshold = { numerator = '1', denominator = '3' }

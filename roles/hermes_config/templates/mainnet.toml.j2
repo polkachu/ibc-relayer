@@ -18,6 +18,7 @@ list = [
 [chains.packet_filter]
 policy = 'allow'
 list = [
+  ['transfer', 'channel-55'], # Comdex
   ['transfer', 'channel-35'], # Juno
   ['transfer', 'channel-37'], # kava
   ['transfer', 'channel-9'], # Osmosis
@@ -31,6 +32,7 @@ policy = 'allow'
 list = [
   ['transfer', 'channel-40'], # Agoric
   ['transfer', 'channel-2'], # Cosmos
+  ['transfer', 'channel-31'], # Comdex
   ['transfer', 'channel-7'], # Crescent
   ['transfer', 'channel-22'], # Evmos
   ['transfer', 'channel-14'], # Kujira
@@ -68,6 +70,7 @@ list = [
 [chains.packet_filter]
 policy = 'allow'
 list = [
+  ['transfer', 'channel-37'], # Comdex
   ['transfer', 'channel-15'], # Gravity
   ['transfer', 'channel-12'], # Injective
   ['transfer', 'channel-11'], # Juno
@@ -75,6 +78,25 @@ list = [
   ['transfer', 'channel-34'], # Terra2
   ['transfer', 'channel-36'], # Migaloo
 ]
+
+{% include 'fragments/mainnet/comdex.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-52'], # Akash
+  ['transfer', 'channel-34'], # Axelar
+  ['transfer', 'channel-61'], # Chihuahua
+  ['transfer', 'channel-37'], # Cosmos
+  ['transfer', 'channel-49'], # Crescent
+  ['transfer', 'channel-35'], # Evmos
+  ['transfer', 'channel-23'], # Gravity
+  ['transfer', 'channel-31'], # Kujira
+  ['transfer', 'channel-18'], # Juno
+  ['transfer', 'channel-1'], # Osmosis
+  ['transfer', 'channel-57'], # Persistence
+]
+
 
 {% include 'fragments/mainnet/cosmos.toml.j2' %}
 
@@ -84,6 +106,7 @@ list = [
   ['transfer', 'channel-405'], # Agoric
   ['transfer', 'channel-293'], # Axelar
   ['transfer', 'channel-358'], # Canto
+  ['transfer', 'channel-400'], # Comdex
   ['transfer', 'channel-326'], # Crescent
   ['transfer', 'channel-187'], # Cryptocom
   ['transfer', 'channel-292'], # Evmos
@@ -104,6 +127,7 @@ policy = 'allow'
 list = [
   ['transfer', 'channel-11'], # Agoric
   ['transfer', 'channel-4'], # Axelar
+  ['transfer', 'channel-26'], # Comdex
   ['transfer', 'channel-1'], # Cosmos
   ['transfer', 'channel-2'], # Gravity
   ['transfer', 'channel-23'], # Injective
@@ -130,6 +154,7 @@ list = [
 policy = 'allow'
 list = [
   ['transfer', 'channel-21'], # Axelar
+  ['transfer', 'channel-26'], # Comdex
   ['transfer', 'channel-3'], # Cosmos
   ['transfer', 'channel-31'], # Cryptocom
   ['transfer', 'channel-10'], # Injective
@@ -148,6 +173,7 @@ policy = 'allow'
 list = [
   ['transfer', 'channel-91'], # Agoric
   ['transfer', 'channel-34'], # Chihuahua
+  ['transfer', 'channel-21'], # Comdex
   ['transfer', 'channel-62'], # Crescent
   ['transfer', 'channel-8'], # Juno
   ['transfer', 'channel-107'], # Kujira
@@ -204,6 +230,7 @@ list = [
 policy = 'allow'
 list = [
   ['transfer', 'channel-9'], # Axelar
+  ['transfer', 'channel-18'], # Comdex
   ['transfer', 'channel-0'], # Cosmos
   ['transfer', 'channel-23'], # Evmos
   ['transfer', 'channel-50'], # Gravity
@@ -236,6 +263,7 @@ list = [
   ['transfer', 'channel-29'], # Akash
   ['transfer', 'channel-50'], # Bitcanna
   ['transfer', 'channel-28'], # Chihuahua
+  ['transfer', 'channel-36'], # Comdex
   ['transfer', 'channel-81'], # Crescent
   ['transfer', 'channel-70'], # Evmos
   ['transfer', 'channel-31'], # Gravity
@@ -286,6 +314,7 @@ list = [
   ['transfer', 'channel-1'], # Akash
   ['transfer', 'channel-51'], # Bitcanna
   ['transfer', 'channel-113'], # Chihuahua
+  ['transfer', 'channel-87'], # Comdex
   ['transfer', 'channel-0'], # Cosmos
   ['transfer', 'channel-5'], # Cryptocom
   ['transfer', 'channel-297'], # Crescent
@@ -317,6 +346,7 @@ list = [
 policy = 'allow'
 list = [
     ['transfer', 'channel-51'], # Axelar
+    ['transfer', 'channel-71'], # Comdex
     ['transfer', 'channel-24'], # Cosmos
     ['transfer', 'channel-68'], # Crescent
     ['transfer', 'channel-41'], # Injective
