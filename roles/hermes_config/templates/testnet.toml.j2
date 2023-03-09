@@ -9,9 +9,7 @@ list = [
   ['transfer', 'channel-61'], # Evmos evmos_9000-4
   ['transfer', 'channel-19'], # Kujira happoon-4
   ['transfer', 'channel-22'], # Osmosis osmo-test-4
-  ['transfer', 'channel-35'], # Sei atlantic-1
   ['transfer', 'channel-84'], # Terra pisco-1
-  ['transfer', 'channel-108'], # XPLA
 ]
 
 {% include 'fragments/testnet/evmos.toml.j2' %}
@@ -40,11 +38,6 @@ list = [
 
 {% include 'fragments/testnet/sei.toml.j2' %}
 
-[chains.packet_filter]
-policy = 'allow'
-list = [
-  ['transfer', 'channel-29'], # Axelar
-]
 
 {% include 'fragments/testnet/terra2.toml.j2' %}
 
@@ -53,14 +46,6 @@ policy = 'allow'
 list = [
   ['transfer', 'channel-22'], # Axelar
   ['transfer', 'channel-237'], # Stargaze
-]
-
-{% include 'fragments/testnet/xpla.toml.j2' %}
-
-[chains.packet_filter]
-policy = 'allow'
-list = [
-  ['transfer', 'channel-0'], # Axelar
 ]
 
 
