@@ -58,3 +58,5 @@ You will leave `mainnet_networks` or `testnet_networks` blank in the inventory f
 ### Some useful commands for self
 
 `{host="hq",unit="hermes_mainnet.service"} |~"dst_chain.*insufficient funds"`
+
+`{host="hq",unit="hermes_mainnet.service"}  |~"ERROR" !~"redundant" !="mismatch" !=" timed out" !="crescent" !="not valid"`
