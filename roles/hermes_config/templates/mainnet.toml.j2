@@ -10,6 +10,7 @@ list = [
   ['transfer', 'channel-2'], # Crescent
   ['transfer', 'channel-5'], # Cosmos
   ['transfer', 'channel-4'], # Gravity
+  ['transfer', 'channel-13'], # Kujira
   ['transfer', 'channel-1'], # Osmosis
 ]
 
@@ -228,6 +229,7 @@ list = [
 [chains.packet_filter]
 policy = 'allow'
 list = [
+  ['transfer', 'channel-61'], # Agoric
   ['transfer', 'channel-9'], # Axelar
   ['transfer', 'channel-18'], # Comdex
   ['transfer', 'channel-0'], # Cosmos
@@ -272,7 +274,6 @@ list = [
   ['wasm.juno1v4887y83d6g28puzvt8cl0f3cdhd3y6y9mpysnsp3k8krdm7l6jqgm0rkn', 'channel-47'], # Osmosis-CW20
   ['transfer', 'channel-0'], # Osmosis
   ['transfer', 'channel-33'], # Persistence
-  ['transfer', 'channel-5'], # Sifchain
   ['transfer', 'channel-20'], # Stargaze
   ['transfer', 'channel-86'], # Terra
   ['transfer', 'channel-62'], # Umee
@@ -329,7 +330,6 @@ list = [
   ['transfer', 'channel-557'], # Mars
   ['transfer', 'channel-4'], # Persistence
   ['transfer', 'channel-522'], # Quicksilver
-  ['transfer', 'channel-47'], # Sifchain
   ['transfer', 'channel-165'], # Sommelier
   ['transfer', 'channel-75'], # Stargaze
   ['transfer', 'channel-326'], # Stride
@@ -372,14 +372,6 @@ list = [
     ['icacontroller-stargaze-1.delegate', 'channel-6'],
 ]
 
-{% include 'fragments/mainnet/sifchain.toml.j2' %}
-
-[chains.packet_filter]
-policy = 'allow'
-list = [
-  ['transfer', 'channel-14'], # Juno
-  ['transfer', 'channel-17'], # Osmosis
-]
 
 {% include 'fragments/mainnet/sommelier.toml.j2' %}
 
