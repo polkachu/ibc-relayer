@@ -59,4 +59,4 @@ You will leave `mainnet_networks` or `testnet_networks` blank in the inventory f
 
 `{host="hq",unit="hermes_mainnet.service"} |~"dst_chain.*insufficient funds"`
 
-`{host="hq",unit="hermes_mainnet.service"}  |~"ERROR" !~"redundant" !="mismatch" !=" timed out" !="crescent" !="not valid"`
+`{host="hq",unit="hermes_mainnet.service"}  |~"ERROR.*dst_chain" !~"redundant" !="mismatch" !=" timed out" !="crescent" !="not valid"`

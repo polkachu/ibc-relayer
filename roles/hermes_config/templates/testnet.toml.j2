@@ -48,31 +48,12 @@ list = [
   ['transfer', 'channel-237'], # Stargaze
 ]
 
-
-{% include 'fragments/testnet/juno.toml.j2' %}
-
-[chains.packet_filter]
-policy = 'allow'
-list = [
-  ['wasm.juno1e7vs76markshus39eyfefh2y3t9guge4t0kvqya3q6vamgsejh4q8lxtq9', 'channel-40'], # Nois-CW20
-]
-
-{% include 'fragments/testnet/nois.toml.j2' %}
-
-[chains.packet_filter]
-policy = 'allow'
-list = [
-  ['wasm.nois1s9ly26evj8ehurptws5d6dm4a9g2z0htcqvlvn95kc30eucl4s5sd8hkgp', 'channel-22'], # Stargaze-CW20
-  ['wasm.nois1j7m4f68lruceg5xq3gfkfdgdgz02vhvlq2p67vf9v3hwdydaat3sajzcy5', 'channel-9'], # Juno-CW20
-]
-
 {% include 'fragments/testnet/stargaze.toml.j2' %}
 
 [chains.packet_filter]
 policy = 'allow'
 list = [
   ['transfer', 'channel-146'], # Terra
-  ['wasm.stars1jza6sr0y2gcnw8v8yhu9mpyv23gs8znfucmea3jj2r85fnfptzdqptgtkp', 'channel-82'], # Nois-CW20
 ]
 
 {% include 'fragments/testnet/quasar.toml.j2' %}
