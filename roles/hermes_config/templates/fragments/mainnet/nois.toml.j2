@@ -1,8 +1,8 @@
 [[chains]]
-id = 'nois-testnet-005'
-rpc_addr = 'http://{{ testnet_nois_ip }}:17357'
-grpc_addr = 'http://{{ testnet_nois_ip }}:17390'
-websocket_addr = 'ws://{{ testnet_nois_ip }}:17357/websocket'
+id = 'nois-1'
+rpc_addr = 'http://{{ nois_ip }}:17357'
+grpc_addr = 'http://{{ nois_ip }}:17390'
+websocket_addr = 'ws://{{ nois_ip }}:17357/websocket'
 
 rpc_timeout = '20s'
 account_prefix = 'nois'
@@ -17,6 +17,6 @@ max_msg_num = 30
 max_tx_size = 1800000
 clock_drift = '15s'
 max_block_time = '10s'
-trusting_period = '12hours'
+trusting_period = '14days'
 memo_prefix = '{{ memo }}'
 trust_threshold = { numerator = '1', denominator = '3' }

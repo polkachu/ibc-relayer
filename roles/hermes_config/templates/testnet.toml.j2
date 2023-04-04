@@ -36,10 +36,8 @@ list = [
   ['transfer', 'channel-312'], # Axelar
 ]
 
-{% include 'fragments/testnet/sei.toml.j2' %}
-
-
 {% include 'fragments/testnet/terra2.toml.j2' %}
+
 
 [chains.packet_filter]
 policy = 'allow'
@@ -75,4 +73,20 @@ list = [
   ['transfer', 'channel-0'], # Quasar
   ['transfer', 'channel-10'], # Quasar
   ['transfer', 'channel-11'], # Quasar
+]
+
+{% include 'fragments/testnet/nois.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['wasm.nois1x55xhexprdwfl6nfju53hfxj77nsxlj5c9jzyvjuastl9f3dt6jsx6l9yg', 'channel-0'], # Juno
+]
+
+{% include 'fragments/testnet/juno.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['wasm.juno1ythyt9wm9y4yxlv8eqccs4p78tylky5q0yx8gfpwycq6ywlycces87e20q', 'channel-157'], # Nois
 ]

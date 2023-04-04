@@ -271,6 +271,7 @@ list = [
   ['transfer', 'channel-58'], # Kichain
   ['transfer', 'channel-87'], # kujira
   ['transfer', 'channel-209'], # mars
+  ['transfer', 'channel-225'], # nois
   ['wasm.juno1v4887y83d6g28puzvt8cl0f3cdhd3y6y9mpysnsp3k8krdm7l6jqgm0rkn', 'channel-47'], # Osmosis-CW20
   ['transfer', 'channel-0'], # Osmosis
   ['transfer', 'channel-33'], # Persistence
@@ -302,6 +303,14 @@ list = [
   ['transfer', 'channel-8'], # Kujira
   ['transfer', 'channel-5'], # Osmosis
   ['transfer', 'channel-0'], # Terra2
+]
+
+{% include 'fragments/mainnet/nois.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-1'], # Juno
 ]
 
 {% include 'fragments/mainnet/osmosis.toml.j2' %}
@@ -443,6 +452,7 @@ list = [
   ['transfer', 'channel-46'], # Stride
   ['transfer', 'channel-86'], # Migaloo
   ['wasm.terra1e0mrzy8077druuu42vs0hu7ugguade0cj65dgtauyaw4gsl4kv0qtdf2au', 'channel-87'], # Migaloo-ampLuna
+  ['transfer', 'channel-93'], # Umee
 ]
 
 {% include 'fragments/mainnet/umee.toml.j2' %}
@@ -454,4 +464,5 @@ list = [
   ['transfer', 'channel-9'], # Gravity
   ['transfer', 'channel-2'], # Juno
   ['transfer', 'channel-0'], # Osmosis
+  ['transfer', 'channel-45'], # Terra2
 ]
