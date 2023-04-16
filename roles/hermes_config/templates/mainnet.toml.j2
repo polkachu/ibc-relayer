@@ -75,7 +75,7 @@ list = [
   ['transfer', 'channel-12'], # Injective
   ['transfer', 'channel-11'], # Juno
   ['transfer', 'channel-7'], # Osmosis
-  ['transfer', 'channel-34'], # Terra2
+  ['transfer', 'channel-40'], # Terra2
   ['transfer', 'channel-39'], # Migaloo
 ]
 
@@ -177,6 +177,7 @@ list = [
   ['transfer', 'channel-62'], # Crescent
   ['transfer', 'channel-8'], # Juno
   ['transfer', 'channel-107'], # Kujira
+  ['transfer', 'channel-18'], # Nym
   ['transfer', 'channel-10'], # Osmosis
   ['transfer', 'channel-7'], # Stargaze
   ['transfer', 'channel-28'], # Umee
@@ -198,6 +199,10 @@ list = [
   ['transfer', 'channel-82'], # Persistence
   ['transfer', 'channel-93'], # Sommelier
   ['transfer', 'channel-89'], # Stride
+  ['icahost', 'channel-113'], # Stride
+  ['icahost', 'channel-114'], # Stride
+  ['icahost', 'channel-115'], # Stride
+  ['icahost', 'channel-116'], # Stride
   ['transfer', 'channel-104'], # Terra2
   ['wasm.inj1rsrefjc7xnl6d6fm6avl706nu5y6nkpxffyevq', 'channel-105'], # Terra2
   ['transfer', 'channel-102'], # Migaloo
@@ -245,6 +250,7 @@ list = [
   ['transfer', 'channel-32'], # Stride
   ['transfer', 'channel-45'], # Teritori
   ['transfer', 'channel-5'], # Terra2
+  ['transfer', 'channel-48'], # Umee
 ]
 
 
@@ -314,6 +320,14 @@ list = [
   ['transfer', 'channel-0'], # Stargaze
 ]
 
+{% include 'fragments/mainnet/nym.toml.j2' %}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+    ['transfer', 'channel-0'], # Gravity
+]
+
 {% include 'fragments/mainnet/osmosis.toml.j2' %}
 
 [chains.packet_filter]
@@ -364,7 +378,9 @@ list = [
     ['transfer', 'channel-6'], # Osmosis
     ['transfer', 'channel-73'], # Quicksilver
     ['transfer', 'channel-67'], # Stride
+    ['transfer', 'channel-81'], # Umee
 ]
+
 
 {% include 'fragments/mainnet/quicksilver.toml.j2' %}
 
@@ -419,6 +435,10 @@ list = [
   ['transfer', 'channel-0'], # Cosmos
   ['transfer', 'channel-9'], # Evmos
   ['transfer', 'channel-6'], # Injective
+  ['icacontroller-injective-1.DELEGATION', 'channel-76'], # Injective
+  ['icacontroller-injective-1.FEE', 'channel-77'], # Injective
+  ['icacontroller-injective-1.WITHDRAWAL', 'channel-78'], # Injective
+  ['icacontroller-injective-1.REDEMPTION', 'channel-79'], # Injective
   ['transfer', 'channel-8'], # Kujira
   ['transfer', 'channel-5'], # Osmosis
   ['transfer', 'channel-53'], # Persistence
@@ -443,7 +463,7 @@ policy = 'allow'
 list = [
   ['transfer', 'channel-45'], # Akash
   ['transfer', 'channel-6'], # Axelar
-  ['transfer', 'channel-44'], # Chihuahua
+  ['transfer', 'channel-98'], # Chihuahua
   ['transfer', 'channel-37'], # Crescent
   ['wasm.terra1jhfjnm39y3nn9l4520mdn4k5mw23nz0674c4gsvyrcr90z9tqcvst22fce', 'channel-91'], # Injective
   ['wasm.terra1fkuhmq52pj08qqffp0elrvmzel8zz857x0pjjuuaar54mgcpe35s9km660', 'channel-92'], # Injective
@@ -465,6 +485,8 @@ list = [
   ['transfer', 'channel-33'], # Axelar
   ['transfer', 'channel-9'], # Gravity
   ['transfer', 'channel-2'], # Juno
+  ['transfer', 'channel-37'], # Kujira
   ['transfer', 'channel-0'], # Osmosis
+  ['transfer', 'channel-51'], # Persistence
   ['transfer', 'channel-45'], # Terra2
 ]
