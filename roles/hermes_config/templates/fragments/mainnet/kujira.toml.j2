@@ -21,3 +21,25 @@ trusting_period = '10days'
 memo_prefix = '{{ memo }}'
 fee_granter = "kujira1vkje22mayn72r0a7kna6agv0sqm6k94ry9k6dd"
 trust_threshold = { numerator = '1', denominator = '3' }
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-61'], # Agoric
+  ['transfer', 'channel-9'], # Axelar
+  ['transfer', 'channel-18'], # Comdex
+  ['transfer', 'channel-0'], # Cosmos
+  ['transfer', 'channel-23'], # Evmos
+  ['transfer', 'channel-50'], # Gravity
+  ['transfer', 'channel-54'], # Injective
+  ['transfer', 'channel-1'], # Juno
+  ['transfer', 'channel-55'], # Mars
+  ['transfer', 'channel-58'], # Migaloo
+  ['transfer', 'channel-3'], # Osmosis
+  ['transfer', 'channel-56'], # Persistence
+  ['transfer', 'channel-7'], # Stargaze
+  ['transfer', 'channel-32'], # Stride
+  ['transfer', 'channel-45'], # Teritori
+  ['transfer', 'channel-5'], # Terra2
+  ['transfer', 'channel-48'], # Umee
+]

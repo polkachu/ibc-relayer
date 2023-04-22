@@ -11,7 +11,7 @@ address_type = { derivation = 'cosmos' }
 store_prefix = 'ibc'
 default_gas = 300000
 max_gas = 1000000
-gas_price = { price = 0.0025, denom = 'ujuno' }
+gas_price = { price = 0.000, denom = 'ujuno' }
 gas_multiplier = 1.4
 max_msg_num = 30
 max_tx_size = 1800000
@@ -20,3 +20,27 @@ max_block_time = '10s'
 trusting_period = '14days'
 memo_prefix = '{{ memo }}'
 trust_threshold = { numerator = '1', denominator = '3' }
+
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-29'], # Akash
+  ['transfer', 'channel-50'], # Bitcanna
+  ['transfer', 'channel-28'], # Chihuahua
+  ['transfer', 'channel-36'], # Comdex
+  ['transfer', 'channel-81'], # Crescent
+  ['transfer', 'channel-70'], # Evmos
+  ['transfer', 'channel-31'], # Gravity
+  ['transfer', 'channel-58'], # Kichain
+  ['transfer', 'channel-87'], # kujira
+  ['transfer', 'channel-209'], # mars
+  ['transfer', 'channel-225'], # nois
+  ['wasm.juno1v4887y83d6g28puzvt8cl0f3cdhd3y6y9mpysnsp3k8krdm7l6jqgm0rkn', 'channel-47'], # Osmosis-CW20
+  ['transfer', 'channel-0'], # Osmosis
+  ['transfer', 'channel-33'], # Persistence
+  ['transfer', 'channel-20'], # Stargaze
+  ['transfer', 'channel-86'], # Terra
+  ['transfer', 'channel-62'], # Umee
+  ['transfer', 'channel-210'], # Migaloo
+]

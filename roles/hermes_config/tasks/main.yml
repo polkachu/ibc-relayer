@@ -13,16 +13,6 @@
     owner: '{{ ansible_user }}'
     group: '{{ ansible_user }}'
     mode: '0644'
-  when: scaffolding|bool is false
-
-- name: Copy hermes config script with scaffolding
-  template:
-    src: 'scaffold.toml.j2'
-    dest: '/home/{{ ansible_user }}/.hermes/{{ target }}.toml'
-    owner: '{{ ansible_user }}'
-    group: '{{ ansible_user }}'
-    mode: '0644'
-  when: scaffolding|bool is true
 
 - name: create hermes systemd unit
   become: true

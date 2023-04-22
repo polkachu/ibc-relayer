@@ -1,492 +1,63 @@
 {% include 'fragments/header.toml.j2' %}
 
-
 {% include 'fragments/mainnet/agoric.toml.j2' %}
-
-[chains.packet_filter]
-policy = 'allow'
-list = [
-  ['transfer', 'channel-6'], # Axelar
-  ['transfer', 'channel-2'], # Crescent
-  ['transfer', 'channel-5'], # Cosmos
-  ['transfer', 'channel-4'], # Gravity
-  ['transfer', 'channel-13'], # Kujira
-  ['transfer', 'channel-1'], # Osmosis
-]
 
 {% include 'fragments/mainnet/akash.toml.j2' %}
 
-[chains.packet_filter]
-policy = 'allow'
-list = [
-  ['transfer', 'channel-55'], # Comdex
-  ['transfer', 'channel-35'], # Juno
-  ['transfer', 'channel-37'], # kava
-  ['transfer', 'channel-9'], # Osmosis
-  ['transfer', 'channel-56'], # Terra2
-]
-
 {% include 'fragments/mainnet/axelar.toml.j2' %}
-
-[chains.packet_filter]
-policy = 'allow'
-list = [
-  ['transfer', 'channel-40'], # Agoric
-  ['transfer', 'channel-2'], # Cosmos
-  ['transfer', 'channel-31'], # Comdex
-  ['transfer', 'channel-7'], # Crescent
-  ['transfer', 'channel-22'], # Evmos
-  ['transfer', 'channel-14'], # Kujira
-  ['transfer', 'channel-10'], # Injective
-  ['transfer', 'channel-3'], # Osmosis
-  ['transfer', 'channel-42'], # Persistence
-  ['transfer', 'channel-18'], # Stargaze
-  ['transfer', 'channel-64'], # Stride
-  ['transfer', 'channel-11'], # Terra
-  ['transfer', 'channel-36'], # Umee
-]
 
 {% include 'fragments/mainnet/bitcanna.toml.j2' %}
 
-[chains.packet_filter]
-policy = 'allow'
-list = [
-  ['transfer', 'channel-10'], # Juno
-  ['transfer', 'channel-1'], # Osmosis
-]
-
 {% include 'fragments/mainnet/canto.toml.j2' %}
-
-[chains.packet_filter]
-policy = 'allow'
-list = [
-  ['transfer', 'channel-2'], # Cosmos
-  ['transfer', 'channel-8'], # Injective
-]
-
 
 {% include 'fragments/mainnet/chihuahua.toml.j2' %}
 
-[chains.packet_filter]
-policy = 'allow'
-list = [
-  ['transfer', 'channel-37'], # Comdex
-  ['transfer', 'channel-15'], # Gravity
-  ['transfer', 'channel-12'], # Injective
-  ['transfer', 'channel-11'], # Juno
-  ['transfer', 'channel-7'], # Osmosis
-  ['transfer', 'channel-40'], # Terra2
-  ['transfer', 'channel-39'], # Migaloo
-]
-
 {% include 'fragments/mainnet/comdex.toml.j2' %}
-
-[chains.packet_filter]
-policy = 'allow'
-list = [
-  ['transfer', 'channel-52'], # Akash
-  ['transfer', 'channel-34'], # Axelar
-  ['transfer', 'channel-61'], # Chihuahua
-  ['transfer', 'channel-37'], # Cosmos
-  ['transfer', 'channel-49'], # Crescent
-  ['transfer', 'channel-35'], # Evmos
-  ['transfer', 'channel-23'], # Gravity
-  ['transfer', 'channel-18'], # Juno
-  ['transfer', 'channel-31'], # Kujira
-  ['transfer', 'channel-1'], # Osmosis
-  ['transfer', 'channel-57'], # Persistence
-]
-
 
 {% include 'fragments/mainnet/cosmos.toml.j2' %}
 
-[chains.packet_filter]
-policy = 'allow'
-list = [
-  ['transfer', 'channel-405'], # Agoric
-  ['transfer', 'channel-293'], # Axelar
-  ['transfer', 'channel-358'], # Canto
-  ['transfer', 'channel-400'], # Comdex
-  ['transfer', 'channel-326'], # Crescent
-  ['transfer', 'channel-187'], # Cryptocom
-  ['transfer', 'channel-292'], # Evmos
-  ['transfer', 'channel-220'], # Injective
-  ['transfer', 'channel-277'], # Kava
-  ['transfer', 'channel-343'], # Kujira
-  ['transfer', 'channel-141'], # Osmosis
-  ['transfer', 'channel-190'], # Persistence
-  ['transfer', 'channel-467'], # Quicksilver
-  ['transfer', 'channel-391'], # Stride
-  ['transfer', 'channel-431'], # Teritori
-]
-
 {% include 'fragments/mainnet/crescent.toml.j2' %}
-
-[chains.packet_filter]
-policy = 'allow'
-list = [
-  ['transfer', 'channel-11'], # Agoric
-  ['transfer', 'channel-4'], # Axelar
-  ['transfer', 'channel-26'], # Comdex
-  ['transfer', 'channel-1'], # Cosmos
-  ['transfer', 'channel-2'], # Gravity
-  ['transfer', 'channel-23'], # Injective
-  ['transfer', 'channel-3'], # Juno
-  ['transfer', 'channel-9'], # Osmosis
-  ['transfer', 'channel-30'], # Persistence
-  ['transfer', 'channel-27'], # Terra2
-]
 
 {% include 'fragments/mainnet/cryptocom.toml.j2' %}
 
-[chains.packet_filter]
-policy = 'allow'
-list = [
-    ['transfer', 'channel-27'], # Cosmos
-    ['transfer', 'channel-57'], # Evmosd
-    ['transfer', 'channel-10'], # Osmosis
-]
-
-
 {% include 'fragments/mainnet/evmos.toml.j2' %}
-
-[chains.packet_filter]
-policy = 'allow'
-list = [
-  ['transfer', 'channel-21'], # Axelar
-  ['transfer', 'channel-26'], # Comdex
-  ['transfer', 'channel-3'], # Cosmos
-  ['transfer', 'channel-31'], # Cryptocom
-  ['transfer', 'channel-10'], # Injective
-  ['transfer', 'channel-18'], # Kujira
-  ['transfer', 'channel-5'], # Juno
-  ['transfer', 'channel-0'], # Osmosis
-  ['transfer', 'channel-37'], # Quicksilver
-  ['transfer', 'channel-25'], # Stride
-  ['transfer', 'channel-35'], # Teritori
-]
 
 {% include 'fragments/mainnet/gravity.toml.j2' %}
 
-[chains.packet_filter]
-policy = 'allow'
-list = [
-  ['transfer', 'channel-91'], # Agoric
-  ['transfer', 'channel-34'], # Chihuahua
-  ['transfer', 'channel-21'], # Comdex
-  ['transfer', 'channel-62'], # Crescent
-  ['transfer', 'channel-8'], # Juno
-  ['transfer', 'channel-107'], # Kujira
-  ['transfer', 'channel-18'], # Nym
-  ['transfer', 'channel-10'], # Osmosis
-  ['transfer', 'channel-7'], # Stargaze
-  ['transfer', 'channel-28'], # Umee
-]
-
 {% include 'fragments/mainnet/injective.toml.j2' %}
-
-[chains.packet_filter]
-policy = 'allow'
-list = [
-  ['transfer', 'channel-84'], # Axelar
-  ['transfer', 'channel-99'], # Canto
-  ['transfer', 'channel-76'], # Chihuahua
-  ['transfer', 'channel-90'], # Crescent
-  ['transfer', 'channel-1'], # Cosmos
-  ['transfer', 'channel-83'], # Evmos
-  ['transfer', 'channel-98'], # Kujira
-  ['transfer', 'channel-8'], # Osmosis
-  ['transfer', 'channel-82'], # Persistence
-  ['transfer', 'channel-93'], # Sommelier
-  ['transfer', 'channel-89'], # Stride
-  ['icahost', 'channel-113'], # Stride
-  ['icahost', 'channel-114'], # Stride
-  ['icahost', 'channel-115'], # Stride
-  ['icahost', 'channel-116'], # Stride
-  ['transfer', 'channel-104'], # Terra2
-  ['wasm.inj1rsrefjc7xnl6d6fm6avl706nu5y6nkpxffyevq', 'channel-105'], # Terra2
-  ['transfer', 'channel-102'], # Migaloo
-]
-
-
-{% include 'fragments/mainnet/kichain.toml.j2' %}
-
-[chains.packet_filter]
-policy = 'allow'
-list = [
-  ['transfer', 'channel-8'], # Juno
-  ['transfer', 'channel-0'], # Osmosis
-]
-
-{% include 'fragments/mainnet/kava.toml.j2' %}
-
-[chains.packet_filter]
-policy = 'allow'
-list = [
-  ['transfer', 'channel-5'], # Akash
-  ['transfer', 'channel-0'], # Cosmos
-  ['transfer', 'channel-1'], # Osmosis
-]
-
-
-{% include 'fragments/mainnet/kujira.toml.j2' %}
-
-[chains.packet_filter]
-policy = 'allow'
-list = [
-  ['transfer', 'channel-61'], # Agoric
-  ['transfer', 'channel-9'], # Axelar
-  ['transfer', 'channel-18'], # Comdex
-  ['transfer', 'channel-0'], # Cosmos
-  ['transfer', 'channel-23'], # Evmos
-  ['transfer', 'channel-50'], # Gravity
-  ['transfer', 'channel-54'], # Injective
-  ['transfer', 'channel-1'], # Juno
-  ['transfer', 'channel-55'], # Mars
-  ['transfer', 'channel-58'], # Migaloo
-  ['transfer', 'channel-3'], # Osmosis
-  ['transfer', 'channel-56'], # Persistence
-  ['transfer', 'channel-7'], # Stargaze
-  ['transfer', 'channel-32'], # Stride
-  ['transfer', 'channel-45'], # Teritori
-  ['transfer', 'channel-5'], # Terra2
-  ['transfer', 'channel-48'], # Umee
-]
-
 
 {% include 'fragments/mainnet/jackal.toml.j2' %}
 
-[chains.packet_filter]
-policy = 'allow'
-list = [
-  ['transfer', 'channel-0'], # Osmosis
-]
-
 {% include 'fragments/mainnet/juno.toml.j2' %}
 
-[chains.packet_filter]
-policy = 'allow'
-list = [
-  ['transfer', 'channel-29'], # Akash
-  ['transfer', 'channel-50'], # Bitcanna
-  ['transfer', 'channel-28'], # Chihuahua
-  ['transfer', 'channel-36'], # Comdex
-  ['transfer', 'channel-81'], # Crescent
-  ['transfer', 'channel-70'], # Evmos
-  ['transfer', 'channel-31'], # Gravity
-  ['transfer', 'channel-58'], # Kichain
-  ['transfer', 'channel-87'], # kujira
-  ['transfer', 'channel-209'], # mars
-  ['transfer', 'channel-225'], # nois
-  ['wasm.juno1v4887y83d6g28puzvt8cl0f3cdhd3y6y9mpysnsp3k8krdm7l6jqgm0rkn', 'channel-47'], # Osmosis-CW20
-  ['transfer', 'channel-0'], # Osmosis
-  ['transfer', 'channel-33'], # Persistence
-  ['transfer', 'channel-20'], # Stargaze
-  ['transfer', 'channel-86'], # Terra
-  ['transfer', 'channel-62'], # Umee
-  ['transfer', 'channel-210'], # Migaloo
-]
+{% include 'fragments/mainnet/kichain.toml.j2' %}
+
+{% include 'fragments/mainnet/kava.toml.j2' %}
+
+{% include 'fragments/mainnet/kujira.toml.j2' %}
 
 {% include 'fragments/mainnet/mars.toml.j2' %}
 
-[chains.packet_filter]
-policy = 'allow'
-list = [
-  ['transfer', 'channel-3'], # Juno
-  ['transfer', 'channel-0'], # Kujira
-  ['transfer', 'channel-1'], # Osmosis
-  ['transfer', 'channel-2'], # Terra2
-]
-
 {% include 'fragments/mainnet/migaloo.toml.j2' %}
-
-[chains.packet_filter]
-policy = 'allow'
-list = [
-  ['transfer', 'channel-10'], # Chihuahua
-  ['transfer', 'channel-3'], # Injective
-  ['transfer', 'channel-1'], # Juno
-  ['transfer', 'channel-8'], # Kujira
-  ['transfer', 'channel-5'], # Osmosis
-  ['transfer', 'channel-0'], # Terra2
-]
 
 {% include 'fragments/mainnet/nois.toml.j2' %}
 
-[chains.packet_filter]
-policy = 'allow'
-list = [
-  ['transfer', 'channel-1'], # Juno
-  ['transfer', 'channel-0'], # Stargaze
-]
-
 {% include 'fragments/mainnet/nym.toml.j2' %}
-
-[chains.packet_filter]
-policy = 'allow'
-list = [
-    ['transfer', 'channel-0'], # Gravity
-]
 
 {% include 'fragments/mainnet/osmosis.toml.j2' %}
 
-[chains.packet_filter]
-policy = 'allow'
-list = [
-  ['transfer', 'channel-320'], # Agoric
-  ['transfer', 'channel-208'], # Axelar
-  ['transfer', 'channel-1'], # Akash
-  ['transfer', 'channel-51'], # Bitcanna
-  ['transfer', 'channel-113'], # Chihuahua
-  ['transfer', 'channel-87'], # Comdex
-  ['transfer', 'channel-0'], # Cosmos
-  ['transfer', 'channel-5'], # Cryptocom
-  ['transfer', 'channel-297'], # Crescent
-  ['transfer', 'channel-204'], # Evmos
-  ['transfer', 'channel-144'], # Gravity
-  ['transfer', 'channel-122'], # Injective
-  ['transfer', 'channel-412'], # Jackal
-  ['transfer', 'channel-42'], # Juno
-  ['transfer', 'channel-169'], # Juno CW-20
-  ['transfer', 'channel-143'], # Kava
-  ['transfer', 'channel-77'], # Kichain
-  ['transfer', 'channel-259'], # Kujira
-  ['transfer', 'channel-557'], # Mars
-  ['transfer', 'channel-4'], # Persistence
-  ['transfer', 'channel-522'], # Quicksilver
-  ['transfer', 'channel-165'], # Sommelier
-  ['transfer', 'channel-75'], # Stargaze
-  ['transfer', 'channel-326'], # Stride
-  ['transfer', 'channel-362'], # Teritori
-  ['transfer', 'channel-251'], # Terra2
-  ['transfer', 'channel-184'], # Umee
-  ['transfer', 'channel-642'], # Migaloo
-]
-
 {% include 'fragments/mainnet/persistence.toml.j2' %}
-
-[chains.packet_filter]
-policy = 'allow'
-list = [
-    ['transfer', 'channel-51'], # Axelar
-    ['transfer', 'channel-71'], # Comdex
-    ['transfer', 'channel-24'], # Cosmos
-    ['transfer', 'channel-68'], # Crescent
-    ['transfer', 'channel-41'], # Injective
-    ['transfer', 'channel-37'], # Juno
-    ['transfer', 'channel-72'], # Kujira
-    ['transfer', 'channel-6'], # Osmosis
-    ['transfer', 'channel-73'], # Quicksilver
-    ['transfer', 'channel-67'], # Stride
-    ['transfer', 'channel-81'], # Umee
-]
-
 
 {% include 'fragments/mainnet/quicksilver.toml.j2' %}
 
-[chains.packet_filter]
-policy = 'allow'
-list = [
-    ['transfer', 'channel-7'], # Evmos
-    ['transfer', 'channel-0'], # Stargaze
-    ['transfer', 'channel-1'], # Cosmos
-    ['transfer', 'channel-2'], # Osmosis
-    ['transfer', 'channel-16'], # Persistence
-    ['icacontroller-stargaze-1.deposit', 'channel-3'],
-    ['icacontroller-stargaze-1.withdrawal', 'channel-4'],
-    ['icacontroller-stargaze-1.performance', 'channel-5'],
-    ['icacontroller-stargaze-1.delegate', 'channel-6'],
-]
-
-
 {% include 'fragments/mainnet/sommelier.toml.j2' %}
-
-[chains.packet_filter]
-policy = 'allow'
-list = [
-  ['transfer', 'channel-1'], # Injective
-  ['transfer', 'channel-0'], # Osmosis
-]
 
 {% include 'fragments/mainnet/stargaze.toml.j2' %}
 
-[chains.packet_filter]
-policy = 'allow'
-list = [
-  ['transfer', 'channel-50'], # Axelar
-  ['transfer', 'channel-6'], # Gravity
-  ['transfer', 'channel-49'], # Kujira
-  ['transfer', 'channel-5'], # Juno
-  ['transfer', 'channel-137'], # Nois
-  ['transfer', 'channel-0'], # Osmosis
-  ['transfer', 'channel-124'], # Quicksilver
-  ['icahost', 'channel-125'], ## Quicksilver delegate
-  ['icahost', 'channel-126'], ## Quicksilver deposit
-  ['icahost', 'channel-129'], ## Quicksilver withdrawal
-  ['icahost', 'channel-130'], ## Quicksilver performance
-]
-
 {% include 'fragments/mainnet/stride.toml.j2' %}
-
-[chains.packet_filter]
-policy = 'allow'
-list = [
-  ['transfer', 'channel-69'], # Axelar
-  ['transfer', 'channel-0'], # Cosmos
-  ['transfer', 'channel-9'], # Evmos
-  ['transfer', 'channel-6'], # Injective
-  ['icacontroller-injective-1.DELEGATION', 'channel-76'], # Injective
-  ['icacontroller-injective-1.FEE', 'channel-77'], # Injective
-  ['icacontroller-injective-1.WITHDRAWAL', 'channel-78'], # Injective
-  ['icacontroller-injective-1.REDEMPTION', 'channel-79'], # Injective
-  ['transfer', 'channel-8'], # Kujira
-  ['transfer', 'channel-5'], # Osmosis
-  ['transfer', 'channel-53'], # Persistence
-  ['transfer', 'channel-52'], # Terra2
-]
 
 {% include 'fragments/mainnet/teritori.toml.j2' %}
 
-[chains.packet_filter]
-policy = 'allow'
-list = [
-  ['transfer', 'channel-10'], # Cosmos
-  ['transfer', 'channel-1'], # Evmos
-  ['transfer', 'channel-12'], # Kujira
-  ['transfer', 'channel-0'], # Osmosis
-]
-
 {% include 'fragments/mainnet/terra2.toml.j2' %}
 
-[chains.packet_filter]
-policy = 'allow'
-list = [
-  ['transfer', 'channel-45'], # Akash
-  ['transfer', 'channel-6'], # Axelar
-  ['transfer', 'channel-98'], # Chihuahua
-  ['transfer', 'channel-37'], # Crescent
-  ['wasm.terra1jhfjnm39y3nn9l4520mdn4k5mw23nz0674c4gsvyrcr90z9tqcvst22fce', 'channel-91'], # Injective
-  ['wasm.terra1fkuhmq52pj08qqffp0elrvmzel8zz857x0pjjuuaar54mgcpe35s9km660', 'channel-92'], # Injective
-  ['transfer', 'channel-2'], # Juno
-  ['transfer', 'channel-10'], # Kujira
-  ['transfer', 'channel-78'], # Mars
-  ['transfer', 'channel-1'], # Osmosis
-  ['transfer', 'channel-46'], # Stride
-  ['transfer', 'channel-86'], # Migaloo
-  ['wasm.terra1e0mrzy8077druuu42vs0hu7ugguade0cj65dgtauyaw4gsl4kv0qtdf2au', 'channel-87'], # Migaloo-ampLuna
-  ['transfer', 'channel-93'], # Umee
-]
-
 {% include 'fragments/mainnet/umee.toml.j2' %}
-
-[chains.packet_filter]
-policy = 'allow'
-list = [
-  ['transfer', 'channel-33'], # Axelar
-  ['transfer', 'channel-9'], # Gravity
-  ['transfer', 'channel-2'], # Juno
-  ['transfer', 'channel-37'], # Kujira
-  ['transfer', 'channel-0'], # Osmosis
-  ['transfer', 'channel-51'], # Persistence
-  ['transfer', 'channel-45'], # Terra2
-]

@@ -20,3 +20,13 @@ max_block_time = '10s'
 trusting_period = '7days'
 memo_prefix = '{{ memo }}'
 trust_threshold = { numerator = '1', denominator = '3' }
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-55'], # Comdex
+  ['transfer', 'channel-35'], # Juno
+  ['transfer', 'channel-37'], # kava
+  ['transfer', 'channel-9'], # Osmosis
+  ['transfer', 'channel-56'], # Terra2
+]
