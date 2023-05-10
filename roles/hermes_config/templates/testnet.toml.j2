@@ -3,90 +3,22 @@
 
 {% include 'fragments/testnet/axelar.toml.j2' %}
 
-[chains.packet_filter]
-policy = 'allow'
-list = [
-  ['transfer', 'channel-61'], # Evmos evmos_9000-4
-  ['transfer', 'channel-19'], # Kujira happoon-4
-  ['transfer', 'channel-22'], # Osmosis osmo-test-4
-  ['transfer', 'channel-84'], # Terra pisco-1
-]
-
 {% include 'fragments/testnet/evmos.toml.j2' %}
-
-[chains.packet_filter]
-policy = 'allow'
-list = [
-  ['transfer', 'channel-22'], # Axelar
-]
 
 {% include 'fragments/testnet/kujira.toml.j2' %}
 
-[chains.packet_filter]
-policy = 'allow'
-list = [
-  ['transfer', 'channel-8'], # Axelar
-]
-
 {% include 'fragments/testnet/osmosis.toml.j2' %}
-
-[chains.packet_filter]
-policy = 'allow'
-list = [
-  ['transfer', 'channel-312'], # Axelar
-]
 
 {% include 'fragments/testnet/terra2.toml.j2' %}
 
-
-[chains.packet_filter]
-policy = 'allow'
-list = [
-  ['transfer', 'channel-22'], # Axelar
-  ['transfer', 'channel-237'], # Stargaze
-]
-
 {% include 'fragments/testnet/stargaze.toml.j2' %}
-
-[chains.packet_filter]
-policy = 'allow'
-list = [
-  ['transfer', 'channel-146'], # Terra
-]
 
 {% include 'fragments/testnet/quasar.toml.j2' %}
 
-[chains.packet_filter]
-policy = 'allow'
-list = [
-    ['transfer', 'channel-0'], # Quasar-Osmosis
-    ['wasm.quasar1nc5tatafv6eyq7llkr2gv50ff9e22mnf70qgjlv737ktmt4eswrqgsk7e6', '*'],
-    ['wasm.quasar1wug8sewp6cedgkmrmvhl3lf3tulagm9hnvy8p0rppz9yjw0g4wtqu5prdk', '*'],
-    ['wasm.quasar1xr3rq8yvd7qplsw5yx90ftsr2zdhg4e9z60h5duusgxpv72hud3syhezhc', '*'],
-]
-
 {% include 'fragments/testnet/quasar-osmosis.toml.j2' %}
-
-[chains.packet_filter]
-policy = 'allow'
-list = [
-  ['transfer', 'channel-0'], # Quasar
-  ['transfer', 'channel-10'], # Quasar
-  ['transfer', 'channel-11'], # Quasar
-]
 
 {% include 'fragments/testnet/nois.toml.j2' %}
 
-[chains.packet_filter]
-policy = 'allow'
-list = [
-  ['wasm.nois1x55xhexprdwfl6nfju53hfxj77nsxlj5c9jzyvjuastl9f3dt6jsx6l9yg', 'channel-0'], # Juno
-]
+
 
 {% include 'fragments/testnet/juno.toml.j2' %}
-
-[chains.packet_filter]
-policy = 'allow'
-list = [
-  ['wasm.juno1ythyt9wm9y4yxlv8eqccs4p78tylky5q0yx8gfpwycq6ywlycces87e20q', 'channel-157'], # Nois
-]

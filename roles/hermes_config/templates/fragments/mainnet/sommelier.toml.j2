@@ -1,8 +1,8 @@
 [[chains]]
 id = 'sommelier-3'
-rpc_addr = 'http://{{ sommelier_ip }}:14157'
+rpc_addr = 'http://{{ sommelier_ip }}:26657'
 grpc_addr = 'http://{{ sommelier_ip }}:14190'
-websocket_addr = 'ws://{{ sommelier_ip }}:14157/websocket'
+websocket_addr = 'ws://{{ sommelier_ip }}:26657/websocket'
 
 rpc_timeout = '20s'
 account_prefix = 'somm'
@@ -24,6 +24,7 @@ trust_threshold = { numerator = '1', denominator = '3' }
 [chains.packet_filter]
 policy = 'allow'
 list = [
+  ['transfer', 'channel-5'], # Axelar
   ['transfer', 'channel-1'], # Injective
   ['transfer', 'channel-0'], # Osmosis
 ]

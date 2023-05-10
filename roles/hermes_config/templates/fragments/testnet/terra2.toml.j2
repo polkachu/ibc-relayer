@@ -20,3 +20,10 @@ max_block_time = '10s'
 trusting_period = '288000s'
 memo_prefix = '{{ memo }}'
 trust_threshold = { numerator = '1', denominator = '3' }
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-22'], # Axelar
+  ['transfer', 'channel-237'], # Stargaze
+]
