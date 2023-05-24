@@ -9,9 +9,9 @@ account_prefix = 'neutron'
 key_name = '{{ key_name }}'
 address_type = { derivation = 'cosmos' }
 store_prefix = 'ibc'
-default_gas = 500000
+default_gas = 300000
 max_gas = 1000000
-gas_price = { price = 0.01, denom = 'untrn' }
+gas_price = { price = 0.005, denom = 'ibc/C4CFF46FD6DE35CA4CF4CE031E643C8FDC9BA4B99AE598E9B0ED98FE3A2319F9' }
 gas_multiplier = 1.8
 max_msg_num = 30
 max_tx_size = 2097152
@@ -25,4 +25,5 @@ trust_threshold = { numerator = '1', denominator = '3' }
 policy = 'allow'
 list = [
   ['transfer', 'channel-1'], # Cosmos
+  ['transfer', 'channel-2'], # Axelar
 ]
