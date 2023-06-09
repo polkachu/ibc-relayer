@@ -1,0 +1,22 @@
+{%- filter indent(width=2) %}
+juno:
+  type: cosmos
+  value:
+    key-directory: /home/ubuntu/.relayer_{{ target }}/keys/juno-1
+    key: relayer
+    chain-id: juno-1
+    rpc-addr: http://{{ juno_ip }}:12657
+    account-prefix: juno
+    keyring-backend: test
+    gas-adjustment: 1.2
+    gas-prices: 0.01ujuno
+    min-gas-amount: 0
+    debug: false
+    timeout: 20s
+    block-timeout: ""
+    output-format: json
+    sign-mode: direct
+    extra-codecs: []
+    coin-type: 118
+    broadcast-mode: batch
+{%- endfilter %}

@@ -1,0 +1,22 @@
+{%- filter indent(width=2) %}
+osmosis:
+  type: cosmos
+  value:
+    key-directory: /home/ubuntu/.relayer_{{ target }}/keys/osmo-test-5
+    key: {{ key_name }}
+    chain-id: osmo-test-5
+    rpc-addr: https://osmosis-testnet-rpc.polkachu.com:443
+    account-prefix: osmo
+    keyring-backend: test
+    gas-adjustment: 1.8
+    gas-prices: 0.000uosmo
+    min-gas-amount: 0
+    debug: false
+    timeout: 20s
+    block-timeout: ""
+    output-format: json
+    sign-mode: direct
+    extra-codecs: []
+    coin-type: 118
+    broadcast-mode: batch
+{%- endfilter %}

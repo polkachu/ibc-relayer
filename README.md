@@ -3,7 +3,7 @@
 ## Design Philosophy
 
 1. Support hermes, rly and hyperspace installation
-1. So far, only Hermes configuration is installed since that's the one we use
+1. Support hermes abd rly configuration, although we are transitioning to rly so rly will receive more continuous support
 1. Make config file extensible by DRY principle
 
 ## Guide
@@ -39,6 +39,15 @@ You will need to specify `key_name`, `memo` and a list of target ips in the inve
 ```bash
 ansible-playbook main_hermes_config.yml -e "target=mainnet"
 ansible-playbook main_hermes_config.yml -e "target=testnet"
+```
+
+### rly deployment
+
+[TBD] You will need to specify `key_name`, `memo` and a list of target ips in the inventory file. Examples are provided in the sample file.
+
+```bash
+ansible-playbook main_rly_config.yml -e "target=mainnet"
+ansible-playbook main_rly_config.yml -e "target=testnet"
 ```
 
 ### Some useful commands for self

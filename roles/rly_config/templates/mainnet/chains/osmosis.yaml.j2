@@ -1,0 +1,22 @@
+{%- filter indent(width=2) %}
+osmosis:
+  type: cosmos
+  value:
+    key-directory: /home/ubuntu/.relayer_{{ target }}/keys/osmosis-1
+    key: relayer
+    chain-id: osmosis-1
+    rpc-addr: http://{{ osmosis_ip }}:12557
+    account-prefix: osmo
+    keyring-backend: test
+    gas-adjustment: 1.2
+    gas-prices: 0.01uosmo
+    min-gas-amount: 0
+    debug: false
+    timeout: 20s
+    block-timeout: ""
+    output-format: json
+    sign-mode: direct
+    extra-codecs: []
+    coin-type: 118
+    broadcast-mode: batch
+{%- endfilter %}

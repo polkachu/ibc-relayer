@@ -1,0 +1,22 @@
+{%- filter indent(width=2) %}
+sei:
+  type: cosmos
+  value:
+    key-directory: /home/ubuntu/.relayer_{{ target }}/keys/atlantic-2
+    key: relayer
+    chain-id: atlantic-2
+    rpc-addr: https://sei-testnet-rpc.polkachu.com:443
+    account-prefix: osmo
+    keyring-backend: test
+    gas-adjustment: 2
+    gas-prices: 0.01usei
+    min-gas-amount: 0
+    debug: false
+    timeout: 20s
+    block-timeout: ""
+    output-format: json
+    sign-mode: direct
+    extra-codecs: []
+    coin-type: 118
+    broadcast-mode: batch
+{%- endfilter %}

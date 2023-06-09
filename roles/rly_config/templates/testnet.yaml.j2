@@ -1,0 +1,12 @@
+global:
+  api-listen-addr: :5183
+  timeout: 10s
+  memo: {{ memo }}
+  light-cache-size: 20
+chains:
+  {% include 'testnet/chains/sei.yaml.j2' %}
+
+  {% include 'testnet/chains/osmosis.yaml.j2' %}
+
+paths:
+  {% include 'testnet/paths/osmosis-sei.yaml.j2' %}

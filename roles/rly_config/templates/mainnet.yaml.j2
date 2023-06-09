@@ -1,0 +1,23 @@
+global:
+  api-listen-addr: :5183
+  timeout: 10s
+  memo: Relayed by polkachu
+  light-cache-size: 20
+chains:
+  {% include 'mainnet/chains/juno.yaml.j2' %}
+
+  {% include 'mainnet/chains/osmosis.yaml.j2' %}
+
+paths:
+  juno-osmosis:
+    src:
+      chain-id: juno-1
+      client-id: 07-tendermint-0
+      connection-id: connection-0
+    dst:
+      chain-id: osmosis-1
+      client-id: 07-tendermint-1457
+      connection-id: connection-1142
+    src-channel-filter:
+      rule: ""
+      channel-list: []

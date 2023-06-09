@@ -1,0 +1,39 @@
+---
+- name: make relayer dir
+  file:
+    path: '/home/{{ ansible_user }}/.relayer_{{ target }}/config'
+    owner: '{{ ansible_user }}'
+    group: '{{ ansible_user }}'
+    state: directory
+
+- name: Copy relayer config script with customization
+  template:
+    src: '{{ target }}.yaml.j2'
+    dest: '/home/{{ ansible_user }}/.relayer_{{ target }}/config/config.yaml'
+    owner: '{{ ansible_user }}'
+    group: '{{ ansible_user }}'
+    mode: '0644'
+
+- name: create relayer systemd unit
+  become: true
+  template:
+    src: 'rly.service.j2'
+    dest: '/etc/systemd/system/rly_{{ target }}.service'
+    owner: root
+    group: root
+    mode: '644'
+# - name: Open relayer telemetry port
+#   become: true
+#   ufw:
+#     rule: allow
+#     proto: tcp
+#     port: '{{ telemetry_port }}'
+
+- name: start relayer service
+  become: true
+  systemd:
+    name: 'rly_{{ target }}'
+    state: restarted
+    daemon_reload: yes
+    enabled: yes
+  changed_when: false
