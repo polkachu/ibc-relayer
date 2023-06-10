@@ -5,11 +5,11 @@ osmosis:
     key-directory: /home/ubuntu/.relayer_{{ target }}/keys/osmo-test-5
     key: {{ key_name }}
     chain-id: osmo-test-5
-    rpc-addr: https://osmosis-testnet-rpc.polkachu.com:443
+    rpc-addr: http://{{ testnet_osmosis_ip }}:12557
     account-prefix: osmo
     keyring-backend: test
     gas-adjustment: 1.8
-    gas-prices: 0.000uosmo
+    gas-prices: 0.01uosmo
     min-gas-amount: 0
     debug: false
     timeout: 20s
