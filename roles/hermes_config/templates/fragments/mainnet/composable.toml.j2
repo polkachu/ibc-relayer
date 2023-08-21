@@ -5,11 +5,11 @@ grpc_addr = 'http://{{ composable_ip }}:22290'
 websocket_addr = 'ws://{{ composable_ip }}:22257/websocket'
 
 rpc_timeout = '20s'
-account_prefix = 'banksy'
+account_prefix = 'centauri'
 key_name = '{{ key_name }}'
 address_type = { derivation = 'cosmos' }
 store_prefix = 'ibc'
-default_gas = 200000
+default_gas = 300000
 max_gas = 120000000
 gas_price = { price = 0.00, denom = 'ppica' }
 gas_multiplier = 1.4

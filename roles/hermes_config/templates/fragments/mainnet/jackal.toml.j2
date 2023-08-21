@@ -24,6 +24,7 @@ trust_threshold = { numerator = '1', denominator = '3' }
 [chains.packet_filter]
 policy = 'allow'
 list = [
+  ['transfer', 'channel-40'], # Archway
   ['transfer', 'channel-10'], # Axelar
   ['transfer', 'channel-37'], # Kujira
   ['transfer', 'channel-0'], # Osmosis
