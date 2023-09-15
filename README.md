@@ -11,7 +11,7 @@
 First copy it to your own inventory file so you can customize it to suit your needs:
 
 ```bash
-cp inventory.sample inventory
+cp inventory.sample.ini inventory.ini
 ```
 
 ### Hermes installation
